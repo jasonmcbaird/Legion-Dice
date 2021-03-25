@@ -23,6 +23,7 @@ struct MainPage: View {
         OptionRow(option: $configuration.whiteOffenseOption)
         OptionRow(option: $configuration.offensiveSurgeOption)
         OptionRow(option: $configuration.offensiveSurgeTokensOption)
+        OptionRow(option: $configuration.pierceOption)
       }
       VStack {
         Text("Defense").bold()

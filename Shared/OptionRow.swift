@@ -19,7 +19,8 @@ struct OptionRow: View {
       } else if option.interaction.isRadio {
         Radio(buttons: option.interaction.buttons, selected: $option.interaction.count)
       }
-    }.padding()
+    }.padding(.horizontal, 20)
+    .padding(.vertical, 5)
   }
 }
 

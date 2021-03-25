@@ -30,7 +30,7 @@ struct Simulation {
     
     let surgeBlocks = configuration.defensiveSurge == DefenseDie.Face.block ? defenseDice.rawSurges : 0
     let surgeTokenBlocks = configuration.defensiveSurge == .blank ? min(defenseDice.rawSurges, configuration.defensiveSurgeTokens) : 0
-    blocks = defenseDice.rawBlocks + surgeBlocks + surgeTokenBlocks
+    blocks = max(0, defenseDice.rawBlocks + surgeBlocks + surgeTokenBlocks - configuration.pierce)
     
     wounds = crits + hitsThroughDefenses - blocks
   }

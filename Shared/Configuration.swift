@@ -14,6 +14,7 @@ class Configuration: ObservableObject {
   @Published var whiteOffense: Int
   @Published var offensiveSurge: AttackDie.Face
   @Published var offensiveSurgeTokens: Int
+  @Published var pierce: Int
   
   @Published var cover: Cover
   @Published var save: DefenseDie
@@ -27,6 +28,7 @@ class Configuration: ObservableObject {
        whiteOffense: Int = 6,
        offensiveSurge: AttackDie.Face = .blank,
        offensiveSurgeTokens: Int = 0,
+       pierce: Int = 0,
        cover: Cover = .heavy,
        save: DefenseDie = .init(color: .red),
        defensiveSurge: DefenseDie.Face = .blank,
@@ -35,6 +37,7 @@ class Configuration: ObservableObject {
     self.blackOffense = blackOffense
     self.whiteOffense = whiteOffense
     self.offensiveSurge = offensiveSurge
+    self.pierce = pierce
     self.cover = cover
     self.save = save
     self.defensiveSurge = defensiveSurge
@@ -94,6 +97,15 @@ class Configuration: ObservableObject {
     }
     set {
       offensiveSurgeTokens = newValue.interaction.count
+    }
+  }
+  
+  var pierceOption: Option {
+    get {
+      Option(name: "Pierce", interaction: .counter(pierce))
+    }
+    set {
+      pierce = newValue.interaction.count
     }
   }
   

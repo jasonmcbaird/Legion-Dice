@@ -14,12 +14,15 @@ class Configuration: ObservableObject {
   @Published var whiteOffense: Int
   @Published var offensiveSurge: AttackDie.Face
   @Published var offensiveSurgeTokens: Int
+  @Published var aims: Int
   @Published var pierce: Int
+  @Published var rerollCount: Int = 2
   
   @Published var cover: Cover
   @Published var save: DefenseDie
   @Published var defensiveSurge: DefenseDie.Face
   @Published var defensiveSurgeTokens: Int
+  @Published var armor: Bool
   // TODO: surge tokens, aims, critical, pierce, impact, precise, marksman, lethal, ram
   // TODO: surge tokens, dodges, armor, armor X, danger sense X, uncanny luck X, impervious
   
@@ -28,27 +31,35 @@ class Configuration: ObservableObject {
        whiteOffense: Int = 6,
        offensiveSurge: AttackDie.Face = .blank,
        offensiveSurgeTokens: Int = 0,
+       aims: Int = 0,
        pierce: Int = 0,
        cover: Cover = .heavy,
        save: DefenseDie = .init(color: .red),
        defensiveSurge: DefenseDie.Face = .blank,
-       defensiveSurgeTokens: Int = 0) {
+       defensiveSurgeTokens: Int = 0,
+       armor: Bool = false) {
     self.redOffense = redOffense
     self.blackOffense = blackOffense
     self.whiteOffense = whiteOffense
     self.offensiveSurge = offensiveSurge
+    self.aims = aims
     self.pierce = pierce
     self.cover = cover
     self.save = save
     self.defensiveSurge = defensiveSurge
     self.offensiveSurgeTokens = offensiveSurgeTokens
     self.defensiveSurgeTokens = defensiveSurgeTokens
+    self.armor = armor
   }
   
   var attackDice: [AttackDie] {
-    return Array(repeating: AttackDie(color: .red), count: redOffense) +
-      Array(repeating: AttackDie(color: .black), count: blackOffense) +
-      Array(repeating: AttackDie(color: .white), count: whiteOffense)
+    return Array(repeating: (), count: redOffense).map { AttackDie(color: .red) } +
+      Array(repeating: (), count: blackOffense).map { AttackDie(color: .black) } +
+      Array(repeating: (), count: whiteOffense).map { AttackDie(color: .white) }
+  }
+  
+  var hitsRemovedByDefenses: Int {
+    return cover.removedHits
   }
   
   var redOffenseOption: Option {
@@ -97,6 +108,15 @@ class Configuration: ObservableObject {
     }
     set {
       offensiveSurgeTokens = newValue.interaction.count
+    }
+  }
+  
+  var aimsOption: Option {
+    get {
+      Option(name: "Aims", interaction: .counter(aims))
+    }
+    set {
+      aims = newValue.interaction.count
     }
   }
   
@@ -154,6 +174,17 @@ class Configuration: ObservableObject {
     }
     set {
       defensiveSurgeTokens = newValue.interaction.count
+    }
+  }
+  
+  var armorOption: Option {
+    get {
+      let noneButton = Option.Interaction.RadioButton(name: "None")
+      let fullButton = Option.Interaction.RadioButton(name: "Full")
+      return Option(name: "Armor", interaction: .radio(buttons: [noneButton, fullButton], selected: armor ? fullButton : noneButton))
+    }
+    set {
+      armor = newValue.interaction.count == 1 ? true : false
     }
   }
   

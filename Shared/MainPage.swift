@@ -24,6 +24,7 @@ struct MainPage: View {
         OptionRow(option: $configuration.offensiveSurgeOption)
         OptionRow(option: $configuration.offensiveSurgeTokensOption)
         OptionRow(option: $configuration.pierceOption)
+        OptionRow(option: $configuration.aimsOption)
       }
       VStack {
         Text("Defense").bold()
@@ -31,6 +32,7 @@ struct MainPage: View {
         OptionRow(option: $configuration.saveOption)
         OptionRow(option: $configuration.defensiveSurgeOption)
         OptionRow(option: $configuration.defensiveSurgeTokensOption)
+        OptionRow(option: $configuration.armorOption)
       }
       Spacer()
       SimulateRow()

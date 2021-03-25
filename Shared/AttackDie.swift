@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct AttackDie {
+class AttackDie {
   
   let color: Color
-  let face: Face
+  var face: Face
   
   var hitSideCount: Int {
     switch color {
@@ -25,18 +25,18 @@ struct AttackDie {
     self.face = face
   }
   
-  func roll() -> AttackDie {
+  func roll() {
     let roll = Int.random(in: 1...8)
     switch roll {
     case 1...5:
       let hit = hitSideCount >= roll
-      return AttackDie(color: color, face: hit ? .hit : .blank)
+      self.face = hit ? .hit : .blank
     case 6:
-      return AttackDie(color: color, face: .crit)
+      self.face = .crit
     case 7:
-      return AttackDie(color: color, face: .surge)
+      self.face = .surge
     case 8:
-      return AttackDie(color: color, face: .blank)
+      self.face = .blank
     default:
       fatalError("Random roll out of range")
     }
@@ -69,7 +69,13 @@ extension Array where Element == AttackDie {
     return filter { $0.face == .surge }.count
   }
   
-  func roll() -> [AttackDie] {
-    return map { $0.roll() }
+  func roll() {
+    return forEach { $0.roll() }
+  }
+  
+  func getHits(configuration: Configuration) -> Int {
+    let surgeHits = configuration.offensiveSurge == .hit ? rawSurges : 0
+    let surgeTokenHits = configuration.offensiveSurge == .blank ? Swift.min(rawSurges, configuration.offensiveSurgeTokens) : 0
+    return rawHits + surgeHits + surgeTokenHits
   }
 }

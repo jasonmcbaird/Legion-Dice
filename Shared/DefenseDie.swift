@@ -40,8 +40,8 @@ struct DefenseDie {
   }
   
   enum Color: String, CaseIterable {
-    case red = "Red"
     case white = "White"
+    case red = "Red"
   }
   
   enum Face: String, CaseIterable {

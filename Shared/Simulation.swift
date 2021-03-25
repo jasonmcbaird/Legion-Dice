@@ -18,17 +18,19 @@ struct Simulation {
   
   init(configuration: Configuration) {
     attackDice = configuration.attackDice.roll()
-    let surgeCrits = configuration.offensiveSurge == AttackDie.Face.crit ? attackDice.rawSurges : 0
+    let surgeCrits = configuration.offensiveSurge == .crit ? attackDice.rawSurges : 0
     crits = attackDice.rawCrits + surgeCrits
     
-    let surgeHits = configuration.offensiveSurge == AttackDie.Face.hit ? attackDice.rawSurges : 0
-    hits = attackDice.rawHits + surgeHits
+    let surgeHits = configuration.offensiveSurge == .hit ? attackDice.rawSurges : 0
+    let surgeTokenHits = configuration.offensiveSurge == .blank ? min(attackDice.rawSurges, configuration.offensiveSurgeTokens) : 0
+    hits = attackDice.rawHits + surgeHits + surgeTokenHits
     
     let hitsThroughDefenses = max(hits - configuration.cover.removedHits, 0)
     defenseDice = Array(repeating: configuration.save, count: crits + hitsThroughDefenses).roll()
     
     let surgeBlocks = configuration.defensiveSurge == DefenseDie.Face.block ? defenseDice.rawSurges : 0
-    blocks = defenseDice.rawBlocks + surgeBlocks
+    let surgeTokenBlocks = configuration.defensiveSurge == .blank ? min(defenseDice.rawSurges, configuration.defensiveSurgeTokens) : 0
+    blocks = defenseDice.rawBlocks + surgeBlocks + surgeTokenBlocks
     
     wounds = crits + hitsThroughDefenses - blocks
   }

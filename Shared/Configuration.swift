@@ -13,9 +13,12 @@ class Configuration: ObservableObject {
   @Published var blackOffense: Int
   @Published var whiteOffense: Int
   @Published var offensiveSurge: AttackDie.Face
+  @Published var offensiveSurgeTokens: Int
+  
   @Published var cover: Cover
   @Published var save: DefenseDie
   @Published var defensiveSurge: DefenseDie.Face
+  @Published var defensiveSurgeTokens: Int
   // TODO: surge tokens, aims, critical, pierce, impact, precise, marksman, lethal, ram
   // TODO: surge tokens, dodges, armor, armor X, danger sense X, uncanny luck X, impervious
   
@@ -23,9 +26,11 @@ class Configuration: ObservableObject {
        blackOffense: Int = 4,
        whiteOffense: Int = 6,
        offensiveSurge: AttackDie.Face = .blank,
+       offensiveSurgeTokens: Int = 0,
        cover: Cover = .heavy,
        save: DefenseDie = .init(color: .red),
-       defensiveSurge: DefenseDie.Face = .block) {
+       defensiveSurge: DefenseDie.Face = .blank,
+       defensiveSurgeTokens: Int = 0) {
     self.redOffense = redOffense
     self.blackOffense = blackOffense
     self.whiteOffense = whiteOffense
@@ -33,6 +38,8 @@ class Configuration: ObservableObject {
     self.cover = cover
     self.save = save
     self.defensiveSurge = defensiveSurge
+    self.offensiveSurgeTokens = offensiveSurgeTokens
+    self.defensiveSurgeTokens = defensiveSurgeTokens
   }
   
   var attackDice: [AttackDie] {
@@ -43,7 +50,7 @@ class Configuration: ObservableObject {
   
   var redOffenseOption: Option {
     get {
-      Option(name: "Red Offense", interaction: .counter(redOffense))
+      Option(name: "Red", interaction: .counter(redOffense))
     }
     set {
       redOffense = newValue.interaction.count
@@ -52,7 +59,7 @@ class Configuration: ObservableObject {
   
   var blackOffenseOption: Option {
     get {
-      Option(name: "Black Offense", interaction: .counter(blackOffense))
+      Option(name: "Black", interaction: .counter(blackOffense))
     }
     set {
       blackOffense = newValue.interaction.count
@@ -61,7 +68,7 @@ class Configuration: ObservableObject {
   
   var whiteOffenseOption: Option {
     get {
-      Option(name: "White Offense", interaction: .counter(whiteOffense))
+      Option(name: "White", interaction: .counter(whiteOffense))
     }
     set {
       whiteOffense = newValue.interaction.count
@@ -70,7 +77,7 @@ class Configuration: ObservableObject {
   
   var offensiveSurgeOption: Option {
     get {
-      Option(name: "Offensive Surge", interaction: .radio(buttons: AttackDie.Face.surgableCases.map { .init(name: $0.rawValue) }, selected: .init(name: offensiveSurge.rawValue)))
+      Option(name: "Surge", interaction: .radio(buttons: AttackDie.Face.surgableCases.map { .init(name: $0.rawValue) }, selected: .init(name: offensiveSurge.rawValue)))
     }
     set {
       guard let radioButton = newValue.interaction.buttons.element(at: newValue.interaction.count) else {
@@ -78,6 +85,15 @@ class Configuration: ObservableObject {
         return
       }
       offensiveSurge = AttackDie.Face(rawValue: radioButton.name) ?? .blank
+    }
+  }
+  
+  var offensiveSurgeTokensOption: Option {
+    get {
+      Option(name: "Surge Tokens", interaction: .counter(offensiveSurgeTokens))
+    }
+    set {
+      offensiveSurgeTokens = newValue.interaction.count
     }
   }
   
@@ -109,7 +125,7 @@ class Configuration: ObservableObject {
   
   var defensiveSurgeOption: Option {
     get {
-      Option(name: "Defensive Surge", interaction: .radio(buttons: DefenseDie.Face.surgableCases.map { .init(name: $0.rawValue) }, selected: .init(name: defensiveSurge.rawValue)))
+      Option(name: "Surge", interaction: .radio(buttons: DefenseDie.Face.surgableCases.map { .init(name: $0.rawValue) }, selected: .init(name: defensiveSurge.rawValue)))
     }
     set {
       guard let radioButton = newValue.interaction.buttons.element(at: newValue.interaction.count) else {
@@ -117,6 +133,15 @@ class Configuration: ObservableObject {
         return
       }
       defensiveSurge = DefenseDie.Face(rawValue: radioButton.name) ?? .blank
+    }
+  }
+  
+  var defensiveSurgeTokensOption: Option {
+    get {
+      Option(name: "Surge Tokens", interaction: .counter(defensiveSurgeTokens))
+    }
+    set {
+      defensiveSurgeTokens = newValue.interaction.count
     }
   }
   

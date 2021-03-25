@@ -16,13 +16,21 @@ struct MainPage: View {
   
   var body: some View {
     VStack {
-      OptionRow(option: $configuration.redOffenseOption)
-      OptionRow(option: $configuration.blackOffenseOption)
-      OptionRow(option: $configuration.whiteOffenseOption)
-      OptionRow(option: $configuration.offensiveSurgeOption)
-      OptionRow(option: $configuration.coverOption)
-      OptionRow(option: $configuration.saveOption)
-      OptionRow(option: $configuration.defensiveSurgeOption)
+      VStack {
+        Text("Offense").bold()
+        OptionRow(option: $configuration.redOffenseOption)
+        OptionRow(option: $configuration.blackOffenseOption)
+        OptionRow(option: $configuration.whiteOffenseOption)
+        OptionRow(option: $configuration.offensiveSurgeOption)
+        OptionRow(option: $configuration.offensiveSurgeTokensOption)
+      }
+      VStack {
+        Text("Defense").bold()
+        OptionRow(option: $configuration.coverOption)
+        OptionRow(option: $configuration.saveOption)
+        OptionRow(option: $configuration.defensiveSurgeOption)
+        OptionRow(option: $configuration.defensiveSurgeTokensOption)
+      }
       Spacer()
       SimulateRow()
         .environmentObject(configuration)

@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AAEF337260CD0D000ECB825 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */; };
+		3AAEF342260CD0D000ECB825 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */; };
+		3AAEF344260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */; };
+		3AAEF345260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */; };
+		3AAEF346260CD0D000ECB825 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31C260CD0CD00ECB825 /* MainPage.swift */; };
+		3AAEF347260CD0D000ECB825 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31C260CD0CD00ECB825 /* MainPage.swift */; };
+		3AAEF348260CD0D000ECB825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEF31D260CD0D000ECB825 /* Assets.xcassets */; };
+		3AAEF349260CD0D000ECB825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEF31D260CD0D000ECB825 /* Assets.xcassets */; };
+		3AAEF35D260CD12700ECB825 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF35C260CD12700ECB825 /* Configuration.swift */; };
+		3AAEF35E260CD12700ECB825 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF35C260CD12700ECB825 /* Configuration.swift */; };
+		3AAEF364260CD2FC00ECB825 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF363260CD2FC00ECB825 /* Simulation.swift */; };
+		3AAEF365260CD2FC00ECB825 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF363260CD2FC00ECB825 /* Simulation.swift */; };
+		3AAEF36B260CDD1200ECB825 /* AttackDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF36A260CDD1200ECB825 /* AttackDie.swift */; };
+		3AAEF36C260CDD1200ECB825 /* AttackDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF36A260CDD1200ECB825 /* AttackDie.swift */; };
+		3AAEF372260CDD6700ECB825 /* DefenseDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF371260CDD6700ECB825 /* DefenseDie.swift */; };
+		3AAEF373260CDD6700ECB825 /* DefenseDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF371260CDD6700ECB825 /* DefenseDie.swift */; };
+		3AAEF388260CE11400ECB825 /* SimulateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF387260CE11400ECB825 /* SimulateRow.swift */; };
+		3AAEF389260CE11400ECB825 /* SimulateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF387260CE11400ECB825 /* SimulateRow.swift */; };
+		3AAEF397260CEAD700ECB825 /* OptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF396260CEAD700ECB825 /* OptionRow.swift */; };
+		3AAEF398260CEAD700ECB825 /* OptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF396260CEAD700ECB825 /* OptionRow.swift */; };
+		3AAEF3A5260CEB3A00ECB825 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3A4260CEB3A00ECB825 /* Option.swift */; };
+		3AAEF3A6260CEB3A00ECB825 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3A4260CEB3A00ECB825 /* Option.swift */; };
+		3AAEF3BB260CED3100ECB825 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3BA260CED3100ECB825 /* Counter.swift */; };
+		3AAEF3BC260CED3100ECB825 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3BA260CED3100ECB825 /* Counter.swift */; };
+		3AAEF3C6260D00D600ECB825 /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3C5260D00D600ECB825 /* Radio.swift */; };
+		3AAEF3C7260D00D600ECB825 /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3C5260D00D600ECB825 /* Radio.swift */; };
+		3AAEF3CD260D017600ECB825 /* Array+ElementAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */; };
+		3AAEF3CE260D017600ECB825 /* Array+ElementAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AAEF333260CD0D000ECB825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AAEF316260CD0CD00ECB825 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AAEF321260CD0D000ECB825;
+			remoteInfo = "Legion Dice (iOS)";
+		};
+		3AAEF33E260CD0D000ECB825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AAEF316260CD0CD00ECB825 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AAEF329260CD0D000ECB825;
+			remoteInfo = "Legion Dice (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legion_DiceApp.swift; sourceTree = "<group>"; };
+		3AAEF31C260CD0CD00ECB825 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		3AAEF31D260CD0D000ECB825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AAEF322260CD0D000ECB825 /* Legion Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Legion Dice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAEF325260CD0D000ECB825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AAEF32A260CD0D000ECB825 /* Legion Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Legion Dice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAEF32C260CD0D000ECB825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AAEF32D260CD0D000ECB825 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		3AAEF332260CD0D000ECB825 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		3AAEF338260CD0D000ECB825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AAEF33D260CD0D000ECB825 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		3AAEF343260CD0D000ECB825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AAEF35C260CD12700ECB825 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		3AAEF363260CD2FC00ECB825 /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		3AAEF36A260CDD1200ECB825 /* AttackDie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackDie.swift; sourceTree = "<group>"; };
+		3AAEF371260CDD6700ECB825 /* DefenseDie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefenseDie.swift; sourceTree = "<group>"; };
+		3AAEF387260CE11400ECB825 /* SimulateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateRow.swift; sourceTree = "<group>"; };
+		3AAEF396260CEAD700ECB825 /* OptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRow.swift; sourceTree = "<group>"; };
+		3AAEF3A4260CEB3A00ECB825 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		3AAEF3BA260CED3100ECB825 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		3AAEF3C5260D00D600ECB825 /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
+		3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ElementAt.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AAEF31F260CD0D000ECB825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF327260CD0D000ECB825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF32F260CD0D000ECB825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF33A260CD0D000ECB825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AAEF315260CD0CD00ECB825 = {
+			isa = PBXGroup;
+			children = (
+				3AAEF31A260CD0CD00ECB825 /* Shared */,
+				3AAEF324260CD0D000ECB825 /* iOS */,
+				3AAEF32B260CD0D000ECB825 /* macOS */,
+				3AAEF335260CD0D000ECB825 /* Tests iOS */,
+				3AAEF340260CD0D000ECB825 /* Tests macOS */,
+				3AAEF323260CD0D000ECB825 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AAEF31A260CD0CD00ECB825 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEF3C5260D00D600ECB825 /* Radio.swift */,
+				3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */,
+				3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */,
+				3AAEF31C260CD0CD00ECB825 /* MainPage.swift */,
+				3AAEF396260CEAD700ECB825 /* OptionRow.swift */,
+				3AAEF3BA260CED3100ECB825 /* Counter.swift */,
+				3AAEF3A4260CEB3A00ECB825 /* Option.swift */,
+				3AAEF387260CE11400ECB825 /* SimulateRow.swift */,
+				3AAEF35C260CD12700ECB825 /* Configuration.swift */,
+				3AAEF363260CD2FC00ECB825 /* Simulation.swift */,
+				3AAEF371260CDD6700ECB825 /* DefenseDie.swift */,
+				3AAEF36A260CDD1200ECB825 /* AttackDie.swift */,
+				3AAEF31D260CD0D000ECB825 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3AAEF323260CD0D000ECB825 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEF322260CD0D000ECB825 /* Legion Dice.app */,
+				3AAEF32A260CD0D000ECB825 /* Legion Dice.app */,
+				3AAEF332260CD0D000ECB825 /* Tests iOS.xctest */,
+				3AAEF33D260CD0D000ECB825 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AAEF324260CD0D000ECB825 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEF325260CD0D000ECB825 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		3AAEF32B260CD0D000ECB825 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEF32C260CD0D000ECB825 /* Info.plist */,
+				3AAEF32D260CD0D000ECB825 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3AAEF335260CD0D000ECB825 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */,
+				3AAEF338260CD0D000ECB825 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		3AAEF340260CD0D000ECB825 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */,
+				3AAEF343260CD0D000ECB825 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AAEF321260CD0D000ECB825 /* Legion Dice (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAEF34C260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Legion Dice (iOS)" */;
+			buildPhases = (
+				3AAEF31E260CD0D000ECB825 /* Sources */,
+				3AAEF31F260CD0D000ECB825 /* Frameworks */,
+				3AAEF320260CD0D000ECB825 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Legion Dice (iOS)";
+			productName = "Legion Dice (iOS)";
+			productReference = 3AAEF322260CD0D000ECB825 /* Legion Dice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AAEF329260CD0D000ECB825 /* Legion Dice (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAEF34F260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Legion Dice (macOS)" */;
+			buildPhases = (
+				3AAEF326260CD0D000ECB825 /* Sources */,
+				3AAEF327260CD0D000ECB825 /* Frameworks */,
+				3AAEF328260CD0D000ECB825 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Legion Dice (macOS)";
+			productName = "Legion Dice (macOS)";
+			productReference = 3AAEF32A260CD0D000ECB825 /* Legion Dice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AAEF331260CD0D000ECB825 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAEF352260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				3AAEF32E260CD0D000ECB825 /* Sources */,
+				3AAEF32F260CD0D000ECB825 /* Frameworks */,
+				3AAEF330260CD0D000ECB825 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AAEF334260CD0D000ECB825 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 3AAEF332260CD0D000ECB825 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3AAEF33C260CD0D000ECB825 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAEF355260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				3AAEF339260CD0D000ECB825 /* Sources */,
+				3AAEF33A260CD0D000ECB825 /* Frameworks */,
+				3AAEF33B260CD0D000ECB825 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AAEF33F260CD0D000ECB825 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 3AAEF33D260CD0D000ECB825 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AAEF316260CD0CD00ECB825 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3AAEF321260CD0D000ECB825 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3AAEF329260CD0D000ECB825 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3AAEF331260CD0D000ECB825 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3AAEF321260CD0D000ECB825;
+					};
+					3AAEF33C260CD0D000ECB825 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3AAEF329260CD0D000ECB825;
+					};
+				};
+			};
+			buildConfigurationList = 3AAEF319260CD0CD00ECB825 /* Build configuration list for PBXProject "Legion Dice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AAEF315260CD0CD00ECB825;
+			productRefGroup = 3AAEF323260CD0D000ECB825 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AAEF321260CD0D000ECB825 /* Legion Dice (iOS) */,
+				3AAEF329260CD0D000ECB825 /* Legion Dice (macOS) */,
+				3AAEF331260CD0D000ECB825 /* Tests iOS */,
+				3AAEF33C260CD0D000ECB825 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AAEF320260CD0D000ECB825 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEF348260CD0D000ECB825 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF328260CD0D000ECB825 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEF349260CD0D000ECB825 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF330260CD0D000ECB825 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF33B260CD0D000ECB825 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AAEF31E260CD0D000ECB825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEF3BB260CED3100ECB825 /* Counter.swift in Sources */,
+				3AAEF364260CD2FC00ECB825 /* Simulation.swift in Sources */,
+				3AAEF3A5260CEB3A00ECB825 /* Option.swift in Sources */,
+				3AAEF372260CDD6700ECB825 /* DefenseDie.swift in Sources */,
+				3AAEF346260CD0D000ECB825 /* MainPage.swift in Sources */,
+				3AAEF3CD260D017600ECB825 /* Array+ElementAt.swift in Sources */,
+				3AAEF3C6260D00D600ECB825 /* Radio.swift in Sources */,
+				3AAEF397260CEAD700ECB825 /* OptionRow.swift in Sources */,
+				3AAEF36B260CDD1200ECB825 /* AttackDie.swift in Sources */,
+				3AAEF35D260CD12700ECB825 /* Configuration.swift in Sources */,
+				3AAEF388260CE11400ECB825 /* SimulateRow.swift in Sources */,
+				3AAEF344260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF326260CD0D000ECB825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEF3BC260CED3100ECB825 /* Counter.swift in Sources */,
+				3AAEF365260CD2FC00ECB825 /* Simulation.swift in Sources */,
+				3AAEF3A6260CEB3A00ECB825 /* Option.swift in Sources */,
+				3AAEF373260CDD6700ECB825 /* DefenseDie.swift in Sources */,
+				3AAEF347260CD0D000ECB825 /* MainPage.swift in Sources */,
+				3AAEF3CE260D017600ECB825 /* Array+ElementAt.swift in Sources */,
+				3AAEF3C7260D00D600ECB825 /* Radio.swift in Sources */,
+				3AAEF398260CEAD700ECB825 /* OptionRow.swift in Sources */,
+				3AAEF36C260CDD1200ECB825 /* AttackDie.swift in Sources */,
+				3AAEF35E260CD12700ECB825 /* Configuration.swift in Sources */,
+				3AAEF389260CE11400ECB825 /* SimulateRow.swift in Sources */,
+				3AAEF345260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF32E260CD0D000ECB825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEF337260CD0D000ECB825 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAEF339260CD0D000ECB825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEF342260CD0D000ECB825 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AAEF334260CD0D000ECB825 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AAEF321260CD0D000ECB825 /* Legion Dice (iOS) */;
+			targetProxy = 3AAEF333260CD0D000ECB825 /* PBXContainerItemProxy */;
+		};
+		3AAEF33F260CD0D000ECB825 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AAEF329260CD0D000ECB825 /* Legion Dice (macOS) */;
+			targetProxy = 3AAEF33E260CD0D000ECB825 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3AAEF34A260CD0D000ECB825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AAEF34B260CD0D000ECB825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3AAEF34D260CD0D000ECB825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Legion-Dice";
+				PRODUCT_NAME = "Legion Dice";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AAEF34E260CD0D000ECB825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Legion-Dice";
+				PRODUCT_NAME = "Legion Dice";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AAEF350260CD0D000ECB825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Legion-Dice";
+				PRODUCT_NAME = "Legion Dice";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3AAEF351260CD0D000ECB825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Legion-Dice";
+				PRODUCT_NAME = "Legion Dice";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3AAEF353260CD0D000ECB825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Legion Dice (iOS)";
+			};
+			name = Debug;
+		};
+		3AAEF354260CD0D000ECB825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Legion Dice (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AAEF356260CD0D000ECB825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Legion Dice (macOS)";
+			};
+			name = Debug;
+		};
+		3AAEF357260CD0D000ECB825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QVZRX5Q5HN;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Legion Dice (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AAEF319260CD0CD00ECB825 /* Build configuration list for PBXProject "Legion Dice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEF34A260CD0D000ECB825 /* Debug */,
+				3AAEF34B260CD0D000ECB825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAEF34C260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Legion Dice (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEF34D260CD0D000ECB825 /* Debug */,
+				3AAEF34E260CD0D000ECB825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAEF34F260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Legion Dice (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEF350260CD0D000ECB825 /* Debug */,
+				3AAEF351260CD0D000ECB825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAEF352260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEF353260CD0D000ECB825 /* Debug */,
+				3AAEF354260CD0D000ECB825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAEF355260CD0D000ECB825 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEF356260CD0D000ECB825 /* Debug */,
+				3AAEF357260CD0D000ECB825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AAEF316260CD0CD00ECB825 /* Project object */;
+}

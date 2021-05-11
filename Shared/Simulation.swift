@@ -17,7 +17,8 @@ struct Simulation {
     AimStrategy().spendAims(configuration: configuration, attackDice: attackDice)
     
     let surgeCrits = configuration.offensiveSurge == .crit ? attackDice.rawSurges : 0
-    crits = attackDice.rawCrits + surgeCrits
+    let criticalX = attackDice.getCriticalX(configuration: configuration)
+    crits = attackDice.rawCrits + surgeCrits + criticalX
     
     hits = attackDice.getHits(configuration: configuration)
     
@@ -66,7 +67,7 @@ extension Array where Element == AttackDie {
   func getUnusedSurges(configuration: Configuration) -> [AttackDie] {
     guard configuration.offensiveSurge == .blank else { return [] }
     let surges = filter { $0.face == .surge }
-    return surges.dropLast(configuration.offensiveSurgeTokens)
+    return surges.dropLast(configuration.critical + configuration.offensiveSurgeTokens)
   }
   
   func getSurgesConvertedToHits(configuration: Configuration) -> [AttackDie] {
@@ -74,9 +75,9 @@ extension Array where Element == AttackDie {
     case .crit:
       return []
     case .hit:
-      return filter { $0.face == .surge }
+      return Array(filter { $0.face == .surge }.dropFirst(configuration.critical))
     case .blank:
-      return filter { $0.face == .surge }.suffix(configuration.offensiveSurgeTokens)
+      return filter { $0.face == .surge }.suffix(Swift.max(0, configuration.offensiveSurgeTokens - configuration.critical))
     case .surge:
       fatalError()
     }

@@ -67,8 +67,13 @@ extension Array where Element == AttackDie {
   }
   
   func getHits(configuration: Configuration) -> Int {
-    let surgeHits = configuration.offensiveSurge == .hit ? rawSurges : 0
-    let surgeTokenHits = configuration.offensiveSurge == .blank ? Swift.min(rawSurges, configuration.offensiveSurgeTokens) : 0
+    let surgesAfterCritical = rawSurges - getCriticalX(configuration: configuration)
+    let surgeHits = configuration.offensiveSurge == .hit ? (surgesAfterCritical) : 0
+    let surgeTokenHits = configuration.offensiveSurge == .blank ? Swift.min(surgesAfterCritical, configuration.offensiveSurgeTokens) : 0
     return rawHits + surgeHits + surgeTokenHits
+  }
+  
+  func getCriticalX(configuration: Configuration) -> Int{
+    return configuration.offensiveSurge == .crit ? 0 : Swift.min(configuration.critical, rawSurges)
   }
 }

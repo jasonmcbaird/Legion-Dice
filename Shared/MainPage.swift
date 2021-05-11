@@ -16,6 +16,7 @@ struct MainPage: View {
         OptionRow(option: $configuration.whiteOffenseOption)
         OptionRow(option: $configuration.offensiveSurgeOption)
         OptionRow(option: $configuration.offensiveSurgeTokensOption)
+        OptionRow(option: $configuration.criticalOption)
         OptionRow(option: $configuration.pierceOption)
         OptionRow(option: $configuration.aimsOption)
       }

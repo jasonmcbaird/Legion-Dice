@@ -1,10 +1,3 @@
-//
-//  Option.swift
-//  Legion Dice
-//
-//  Created by Jason Baird on 3/25/21.
-//
-
 import SwiftUI
 
 class Option: ObservableObject {
@@ -17,17 +10,6 @@ class Option: ObservableObject {
       self.interaction
     } set: { value in
       self.interaction = value
-    }
-  }
-  
-  var view: AnyView {
-    switch interaction {
-    case .counter(_):
-      return AnyView(Counter(count: interactionBinding.count))
-    case .toggle(_):
-      fatalError()
-    case .radio(_, _):
-      fatalError()
     }
   }
   

@@ -1,10 +1,3 @@
-//
-//  Simulation.swift
-//  Legion Dice
-//
-//  Created by Jason Baird on 3/25/21.
-//
-
 import Foundation
 
 struct Simulation {
@@ -67,7 +60,6 @@ struct AimStrategy {
     let hits = attackDice.filter { $0.face == .hit } + attackDice.getSurgesConvertedToHits(configuration: configuration)
     return bestBlankDice + Array(hits.prefix(configuration.rerollCount - bestBlankDice.count))
   }
-  
 }
 
 extension Array where Element == AttackDie {

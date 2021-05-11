@@ -1,10 +1,3 @@
-//
-//  AttackDie.swift
-//  Legion Dice
-//
-//  Created by Jason Baird on 3/25/21.
-//
-
 import Foundation
 
 class AttackDie {

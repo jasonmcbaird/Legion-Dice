@@ -1,10 +1,3 @@
-//
-//  OptionRow.swift
-//  Legion Dice
-//
-//  Created by Jason Baird on 3/25/21.
-//
-
 import SwiftUI
 
 struct OptionRow: View {

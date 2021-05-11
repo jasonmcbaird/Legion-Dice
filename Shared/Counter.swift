@@ -5,7 +5,7 @@ struct Counter: View {
   
   var body: some View {
     HStack {
-      Text("\($count.wrappedValue)")
+      Text("\($count.wrappedValue)") // TODO: Float this to the right
       Stepper("", value: $count, in: 0...99)
     }
   }

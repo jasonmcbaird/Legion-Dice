@@ -8,7 +8,7 @@ struct MainPage: View {
   let averageDamage: Float = 0
   
   var body: some View {
-    VStack {
+    VStack { // TODO: Nicer UI
       VStack { // TODO: Better deliniation of offense vs defense
         Text("Offense").bold() // TODO: Tighter use of space. Collapsible sections?
         OptionRow(option: $configuration.redOffenseOption)

@@ -23,7 +23,11 @@ struct Simulation {
     hits = attackDice.getHits(configuration: configuration)
     
     let hitsThroughDefenses = configuration.armor ? 0 : max(hits - configuration.hitsRemovedByDefenses, 0)
-    defenseDice = Array(repeating: configuration.save, count: crits + hitsThroughDefenses).roll()
+    if let save = configuration.save {
+      defenseDice = Array(repeating: save, count: crits + hitsThroughDefenses).roll()
+    } else {
+      defenseDice = []
+    }
     
     let surgeBlocks = configuration.defensiveSurge == DefenseDie.Face.block ? defenseDice.rawSurges : 0
     let surgeTokenBlocks = configuration.defensiveSurge == .blank ? min(defenseDice.rawSurges, configuration.defensiveSurgeTokens) : 0

@@ -8,7 +8,7 @@ struct SimulateRow: View {
   var completedSimulations: Float {
     Float(simulations.count) / Float(expectedSimulationCount)
   }
-  @State var simulationInProgress = true
+  @State var simulationInProgress = false
   
   var averageDamage: Float {
     guard !simulations.isEmpty else { return 0 }
@@ -27,9 +27,10 @@ struct SimulateRow: View {
             }
             simulationInProgress = false
           }
-        }.foregroundColor(.white)
+        }.disabled(simulationInProgress)
+        .foregroundColor(.white)
         .padding()
-        .background(Color.blue)
+        .background(simulationInProgress ? Color.gray : Color.blue)
         .cornerRadius(15)
         ProgressView(value: completedSimulations)
           .progressViewStyle(LinearProgressViewStyle())

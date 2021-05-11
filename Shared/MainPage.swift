@@ -23,6 +23,7 @@ struct MainPage: View {
       VStack {
         Text("Defense").bold()
         OptionRow(option: $configuration.coverOption)
+        OptionRow(option: $configuration.dodgesOption)
         OptionRow(option: $configuration.saveOption)
         OptionRow(option: $configuration.defensiveSurgeOption)
         OptionRow(option: $configuration.defensiveSurgeTokensOption)

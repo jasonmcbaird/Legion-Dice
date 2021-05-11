@@ -13,12 +13,13 @@ class Configuration: ObservableObject {
   @Published var rerollCount: Int = 2
   
   @Published var cover: Cover
-  @Published var save: DefenseDie
+  @Published var dodges: Int
+  @Published var save: DefenseDie?
   @Published var defensiveSurge: DefenseDie.Face
   @Published var defensiveSurgeTokens: Int
   @Published var armor: Bool
   // TODO: impact, precise, marksman, lethal, ram
-  // TODO: dodges, armor X, danger sense X, uncanny luck X, impervious
+  // TODO: armor X, danger sense X, uncanny luck X, impervious
   
   init(redOffense: Int = 0,
        blackOffense: Int = 4,
@@ -29,7 +30,8 @@ class Configuration: ObservableObject {
        aims: Int = 0,
        pierce: Int = 0,
        cover: Cover = .heavy,
-       save: DefenseDie = .init(color: .red),
+       dodges: Int = 0,
+       save: DefenseDie? = .init(color: .red),
        defensiveSurge: DefenseDie.Face = .blank,
        defensiveSurgeTokens: Int = 0,
        armor: Bool = false) {
@@ -42,6 +44,7 @@ class Configuration: ObservableObject {
     self.aims = aims
     self.pierce = pierce
     self.cover = cover
+    self.dodges = dodges
     self.save = save
     self.defensiveSurge = defensiveSurge
     self.defensiveSurgeTokens = defensiveSurgeTokens
@@ -55,7 +58,7 @@ class Configuration: ObservableObject {
   }
   
   var hitsRemovedByDefenses: Int {
-    return cover.removedHits
+    return cover.removedHits + dodges
   }
   
   var redOffenseOption: Option {
@@ -147,16 +150,25 @@ class Configuration: ObservableObject {
     }
   }
   
+  var dodgesOption: Option {
+    get {
+      Option(name: "Dodges", interaction: .counter(dodges))
+    }
+    set {
+      dodges = newValue.interaction.count
+    }
+  }
+  
   var saveOption: Option {
     get {
-      Option(name: "Save", interaction: .radio(buttons: DefenseDie.Color.allCases.map { .init(name: $0.rawValue) }, selected: .init(name: save.color.rawValue)))
+      Option(name: "Save", interaction: .radio(buttons: DefenseDie.Color.allCases.map { .init(name: $0.rawValue) } + [Option.Interaction.RadioButton(name: "None")], selected: .init(name: save?.color.rawValue ?? "None")))
     }
     set {
       guard let radioButton = newValue.interaction.buttons.element(at: newValue.interaction.count) else {
         save = DefenseDie(color: .red)
         return
       }
-      save = DefenseDie(color: DefenseDie.Color(rawValue: radioButton.name) ?? .red)
+      save = DefenseDie.Color(rawValue: radioButton.name).flatMap { DefenseDie(color: $0) }
     }
   }
   

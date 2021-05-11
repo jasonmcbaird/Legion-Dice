@@ -26,7 +26,7 @@ struct Simulation {
     
     let hitsThroughDefenses = configuration.armor ? 0 : max(hits - configuration.hitsRemovedByDefenses, 0)
     if let save = configuration.save {
-      let defenseDiceCount = crits + hitsThroughDefenses + (configuration.impervious ? configuration.pierce : 0)
+      let defenseDiceCount = crits + hitsThroughDefenses + (configuration.impervious ? configuration.pierce : 0) + configuration.dangerSense
       defenseDice = Array(repeating: save, count: defenseDiceCount).roll()
     } else {
       defenseDice = []
@@ -36,7 +36,7 @@ struct Simulation {
     let surgeTokenBlocks = configuration.defensiveSurge == .blank ? min(defenseDice.rawSurges, configuration.defensiveSurgeTokens) : 0
     blocks = max(0, defenseDice.rawBlocks + surgeBlocks + surgeTokenBlocks - configuration.pierce)
     
-    wounds = crits + hitsThroughDefenses - blocks
+    wounds = max(0, crits + hitsThroughDefenses - blocks)
   }
   
 }

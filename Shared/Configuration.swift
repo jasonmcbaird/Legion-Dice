@@ -19,8 +19,10 @@ class Configuration: ObservableObject {
   @Published var defensiveSurgeTokens: Int
   @Published var armor: Bool
   @Published var impervious: Bool
+  @Published var dangerSense: Int
+  
   // TODO: impact, lethal, marksman, ram
-  // TODO: armor X, danger sense X, uncanny luck X
+  // TODO: armor X, uncanny luck X
   
   var rerollCount: Int {
     return 2 + precise
@@ -41,7 +43,8 @@ class Configuration: ObservableObject {
        defensiveSurge: DefenseDie.Face = .blank,
        defensiveSurgeTokens: Int = 0,
        armor: Bool = false,
-       impervious: Bool = false) {
+       impervious: Bool = false,
+       dangerSense: Int = 0) {
     self.redOffense = redOffense
     self.blackOffense = blackOffense
     self.whiteOffense = whiteOffense
@@ -58,6 +61,7 @@ class Configuration: ObservableObject {
     self.defensiveSurgeTokens = defensiveSurgeTokens
     self.armor = armor
     self.impervious = impervious
+    self.dangerSense = dangerSense
   }
   
   var attackDice: [AttackDie] {
@@ -235,6 +239,15 @@ class Configuration: ObservableObject {
         return
       }
       impervious = radioButton.name == "Yes"
+    }
+  }
+  
+  var dangerSenseOption: Option {
+    get {
+      Option(name: "Danger Sense", interaction: .counter(dangerSense))
+    }
+    set {
+      dangerSense = newValue.interaction.count
     }
   }
   

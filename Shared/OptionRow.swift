@@ -13,7 +13,7 @@ struct OptionRow: View {
         Radio(buttons: option.interaction.buttons, selected: $option.interaction.count)
       }
     }.padding(.horizontal, 20)
-    .padding(.vertical, 2)
+    .padding(.vertical, 1)
   }
 }
 

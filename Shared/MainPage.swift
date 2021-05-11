@@ -10,8 +10,8 @@ struct MainPage: View {
   var body: some View {
     VStack {
       VStack { // TODO: Better deliniation of offense vs defense
-        Text("Offense").bold()
-        OptionRow(option: $configuration.redOffenseOption) // TODO: Tighter use of space
+        Text("Offense").bold() // TODO: Tighter use of space. Collapsible sections?
+        OptionRow(option: $configuration.redOffenseOption)
         OptionRow(option: $configuration.blackOffenseOption)
         OptionRow(option: $configuration.whiteOffenseOption)
         OptionRow(option: $configuration.offensiveSurgeOption)
@@ -20,7 +20,9 @@ struct MainPage: View {
         OptionRow(option: $configuration.pierceOption)
         OptionRow(option: $configuration.preciseOption)
         OptionRow(option: $configuration.aimsOption)
-      }
+      }.padding()
+      .border(Color.gray, width: 1)
+      .padding(.horizontal)
       VStack {
         Text("Defense").bold()
         OptionRow(option: $configuration.coverOption)
@@ -30,11 +32,15 @@ struct MainPage: View {
         OptionRow(option: $configuration.defensiveSurgeTokensOption)
         OptionRow(option: $configuration.armorOption)
         OptionRow(option: $configuration.imperviousOption)
-      }
+        OptionRow(option: $configuration.dangerSenseOption)
+      }.padding()
+      .border(Color.gray, width: 1)
+      .padding(.horizontal)
       Spacer()
       SimulateRow()
         .environmentObject(configuration)
-    }
+    } // TODO: Frequently used offensive kits (clone Z6 w/surges, rebel DLT, shore T-21, etc.)
+    // TODO: Frequently used defensive kits (B1, B2, rebel, imp, clone)
   }
 }
 

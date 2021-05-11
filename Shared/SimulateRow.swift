@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SimulateRow: View {
-  private let expectedSimulationCount = 10000
+  private let expectedSimulationCount = 10000 // TODO: Make this configurable
   
   @EnvironmentObject var configuration: Configuration
   @State var simulations: [Simulation] = []

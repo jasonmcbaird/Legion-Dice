@@ -10,7 +10,7 @@ struct Radio: View {
         Button(buttons[index].name) {
           selected = index
         }.foregroundColor(.white)
-        .padding(3)
+        .padding(1)
         .background(index == selected ? Color.red : Color.blue)
         .cornerRadius(5)
       }

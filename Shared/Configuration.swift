@@ -8,9 +8,9 @@ class Configuration: ObservableObject {
   @Published var offensiveSurge: AttackDie.Face
   @Published var offensiveSurgeTokens: Int
   @Published var critical: Int
-  @Published var aims: Int
   @Published var pierce: Int
-  @Published var rerollCount: Int = 2
+  @Published var precise: Int
+  @Published var aims: Int
   
   @Published var cover: Cover
   @Published var dodges: Int
@@ -21,14 +21,19 @@ class Configuration: ObservableObject {
   // TODO: impact, precise, marksman, lethal, ram
   // TODO: armor X, danger sense X, uncanny luck X, impervious
   
+  var rerollCount: Int {
+    return 2 + precise
+  }
+  
   init(redOffense: Int = 0,
        blackOffense: Int = 4,
        whiteOffense: Int = 6,
        offensiveSurge: AttackDie.Face = .blank,
        offensiveSurgeTokens: Int = 0,
        critical: Int = 0,
-       aims: Int = 0,
        pierce: Int = 0,
+       precise: Int = 0,
+       aims: Int = 0,
        cover: Cover = .heavy,
        dodges: Int = 0,
        save: DefenseDie? = .init(color: .red),
@@ -41,8 +46,9 @@ class Configuration: ObservableObject {
     self.offensiveSurge = offensiveSurge
     self.offensiveSurgeTokens = offensiveSurgeTokens
     self.critical = critical
-    self.aims = aims
     self.pierce = pierce
+    self.precise = precise
+    self.aims = aims
     self.cover = cover
     self.dodges = dodges
     self.save = save
@@ -119,21 +125,30 @@ class Configuration: ObservableObject {
     }
   }
   
-  var aimsOption: Option {
-    get {
-      Option(name: "Aims", interaction: .counter(aims))
-    }
-    set {
-      aims = newValue.interaction.count
-    }
-  }
-  
   var pierceOption: Option {
     get {
       Option(name: "Pierce", interaction: .counter(pierce))
     }
     set {
       pierce = newValue.interaction.count
+    }
+  }
+  
+  var preciseOption: Option {
+    get {
+      Option(name: "Precise", interaction: .counter(precise))
+    }
+    set {
+      precise = newValue.interaction.count
+    }
+  }
+  
+  var aimsOption: Option {
+    get {
+      Option(name: "Aims", interaction: .counter(aims))
+    }
+    set {
+      aims = newValue.interaction.count
     }
   }
   

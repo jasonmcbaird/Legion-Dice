@@ -18,6 +18,7 @@ struct MainPage: View {
         OptionRow(option: $configuration.offensiveSurgeTokensOption)
         OptionRow(option: $configuration.criticalOption)
         OptionRow(option: $configuration.pierceOption)
+        OptionRow(option: $configuration.preciseOption)
         OptionRow(option: $configuration.aimsOption)
       }
       VStack {

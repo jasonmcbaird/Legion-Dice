@@ -30,7 +30,7 @@ struct SimulateRow: View {
         }.disabled(simulationInProgress)
         .foregroundColor(.white)
         .padding()
-        .background(simulationInProgress ? Color.gray : Color.blue)
+        .background(simulationInProgress ? Color.blue : Color.red)
         .cornerRadius(15)
         ProgressView(value: completedSimulations)
           .progressViewStyle(LinearProgressViewStyle())

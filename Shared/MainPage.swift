@@ -21,7 +21,10 @@ struct MainPage: View {
         OptionRow(option: $configuration.preciseOption)
         OptionRow(option: $configuration.aimsOption)
       }.padding()
-      .border(Color.gray, width: 1)
+      .overlay(
+        RoundedRectangle(cornerRadius: 16)
+          .stroke(Color.red, lineWidth: 3)
+      )
       .padding(.horizontal)
       VStack {
         Text("Defense").bold()
@@ -34,7 +37,10 @@ struct MainPage: View {
         OptionRow(option: $configuration.imperviousOption)
         OptionRow(option: $configuration.dangerSenseOption)
       }.padding()
-      .border(Color.gray, width: 1)
+      .overlay(
+        RoundedRectangle(cornerRadius: 16)
+          .stroke(Color.blue, lineWidth: 3)
+      )
       .padding(.horizontal)
       Spacer()
       SimulateRow()

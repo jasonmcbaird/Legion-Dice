@@ -11,7 +11,7 @@ struct Radio: View {
           selected = index
         }.foregroundColor(.white)
         .padding(1)
-        .background(index == selected ? Color.red : Color.blue)
+        .background(index == selected ? Color.accentColor : Color.secondary)
         .cornerRadius(5)
       }
     }

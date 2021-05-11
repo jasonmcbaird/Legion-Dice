@@ -18,8 +18,9 @@ class Configuration: ObservableObject {
   @Published var defensiveSurge: DefenseDie.Face
   @Published var defensiveSurgeTokens: Int
   @Published var armor: Bool
-  // TODO: impact, precise, marksman, lethal, ram
-  // TODO: armor X, danger sense X, uncanny luck X, impervious
+  @Published var impervious: Bool
+  // TODO: impact, lethal, marksman, ram
+  // TODO: armor X, danger sense X, uncanny luck X
   
   var rerollCount: Int {
     return 2 + precise
@@ -39,7 +40,8 @@ class Configuration: ObservableObject {
        save: DefenseDie? = .init(color: .red),
        defensiveSurge: DefenseDie.Face = .blank,
        defensiveSurgeTokens: Int = 0,
-       armor: Bool = false) {
+       armor: Bool = false,
+       impervious: Bool = false) {
     self.redOffense = redOffense
     self.blackOffense = blackOffense
     self.whiteOffense = whiteOffense
@@ -55,6 +57,7 @@ class Configuration: ObservableObject {
     self.defensiveSurge = defensiveSurge
     self.defensiveSurgeTokens = defensiveSurgeTokens
     self.armor = armor
+    self.impervious = impervious
   }
   
   var attackDice: [AttackDie] {
@@ -217,6 +220,21 @@ class Configuration: ObservableObject {
     }
     set {
       armor = newValue.interaction.count == 1 ? true : false
+    }
+  }
+  
+  var imperviousOption: Option {
+    get {
+      let yesButton = Option.Interaction.RadioButton(name: "Yes")
+      let noButton = Option.Interaction.RadioButton(name: "No")
+      return Option(name: "Impervious", interaction: .radio(buttons: [yesButton, noButton], selected: impervious ? yesButton : noButton))
+    }
+    set {
+      guard let radioButton = newValue.interaction.buttons.element(at: newValue.interaction.count) else {
+        impervious = false
+        return
+      }
+      impervious = radioButton.name == "Yes"
     }
   }
   

@@ -9,6 +9,8 @@ struct Simulation {
   let blocks: Int
   let wounds: Int
   
+  // TODO: Unit test the crap out of this
+  
   init(configuration: Configuration) {
     attackDice = configuration.attackDice
     
@@ -24,7 +26,8 @@ struct Simulation {
     
     let hitsThroughDefenses = configuration.armor ? 0 : max(hits - configuration.hitsRemovedByDefenses, 0)
     if let save = configuration.save {
-      defenseDice = Array(repeating: save, count: crits + hitsThroughDefenses).roll()
+      let defenseDiceCount = crits + hitsThroughDefenses + (configuration.impervious ? configuration.pierce : 0)
+      defenseDice = Array(repeating: save, count: defenseDiceCount).roll()
     } else {
       defenseDice = []
     }

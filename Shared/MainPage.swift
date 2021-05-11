@@ -9,9 +9,9 @@ struct MainPage: View {
   
   var body: some View {
     VStack {
-      VStack {
+      VStack { // TODO: Better deliniation of offense vs defense
         Text("Offense").bold()
-        OptionRow(option: $configuration.redOffenseOption)
+        OptionRow(option: $configuration.redOffenseOption) // TODO: Tighter use of space
         OptionRow(option: $configuration.blackOffenseOption)
         OptionRow(option: $configuration.whiteOffenseOption)
         OptionRow(option: $configuration.offensiveSurgeOption)
@@ -29,6 +29,7 @@ struct MainPage: View {
         OptionRow(option: $configuration.defensiveSurgeOption)
         OptionRow(option: $configuration.defensiveSurgeTokensOption)
         OptionRow(option: $configuration.armorOption)
+        OptionRow(option: $configuration.imperviousOption)
       }
       Spacer()
       SimulateRow()

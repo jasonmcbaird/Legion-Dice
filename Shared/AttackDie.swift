@@ -35,6 +35,14 @@ class AttackDie {
     }
   }
   
+  var quality: Int {
+    switch color {
+    case .red: return 3
+    case .black: return 2
+    case .white: return 1
+    }
+  }
+  
   enum Face: String, CaseIterable {
     case blank = "Blank"
     case surge = "Surge"
@@ -75,5 +83,11 @@ extension Array where Element == AttackDie {
   
   func getCriticalX(configuration: Configuration) -> Int{
     return configuration.offensiveSurge == .crit ? 0 : Swift.min(configuration.critical, rawSurges)
+  }
+  
+  func sortedByQuality() -> [AttackDie] {
+    return sorted { left, right -> Bool in
+      return left.quality > right.quality
+    }
   }
 }

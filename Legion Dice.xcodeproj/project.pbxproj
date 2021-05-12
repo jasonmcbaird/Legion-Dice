@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A71FDD9264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
+		3A71FDDA264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
 		3AAEF337260CD0D000ECB825 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */; };
 		3AAEF342260CD0D000ECB825 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */; };
 		3AAEF344260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */; };
@@ -55,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A71FDD8264B56C40096EDEE /* AimStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimStrategy.swift; sourceTree = "<group>"; };
 		3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legion_DiceApp.swift; sourceTree = "<group>"; };
 		3AAEF31C260CD0CD00ECB825 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		3AAEF31D260CD0D000ECB825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 				3AAEF387260CE11400ECB825 /* SimulateRow.swift */,
 				3AAEF35C260CD12700ECB825 /* Configuration.swift */,
 				3AAEF363260CD2FC00ECB825 /* Simulation.swift */,
+				3A71FDD8264B56C40096EDEE /* AimStrategy.swift */,
 				3AAEF371260CDD6700ECB825 /* DefenseDie.swift */,
 				3AAEF36A260CDD1200ECB825 /* AttackDie.swift */,
 				3AAEF31D260CD0D000ECB825 /* Assets.xcassets */,
@@ -360,6 +364,7 @@
 				3AAEF35D260CD12700ECB825 /* Configuration.swift in Sources */,
 				3AAEF388260CE11400ECB825 /* SimulateRow.swift in Sources */,
 				3AAEF344260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */,
+				3A71FDD9264B56C40096EDEE /* AimStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +384,7 @@
 				3AAEF35E260CD12700ECB825 /* Configuration.swift in Sources */,
 				3AAEF389260CE11400ECB825 /* SimulateRow.swift in Sources */,
 				3AAEF345260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */,
+				3A71FDDA264B56C40096EDEE /* AimStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

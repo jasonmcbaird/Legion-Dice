@@ -132,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				3AAEF3C5260D00D600ECB825 /* Radio.swift */,
-				3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */,
 				3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */,
 				3AAEF31C260CD0CD00ECB825 /* MainPage.swift */,
 				3AAEF396260CEAD700ECB825 /* OptionRow.swift */,
@@ -144,6 +143,7 @@
 				3A71FDD8264B56C40096EDEE /* AimStrategy.swift */,
 				3AAEF371260CDD6700ECB825 /* DefenseDie.swift */,
 				3AAEF36A260CDD1200ECB825 /* AttackDie.swift */,
+				3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */,
 				3AAEF31D260CD0D000ECB825 /* Assets.xcassets */,
 			);
 			path = Shared;

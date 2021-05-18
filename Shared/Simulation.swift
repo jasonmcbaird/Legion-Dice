@@ -22,7 +22,8 @@ struct Simulation {
     
     hits = attackDice.getHits(configuration: configuration)
     
-    let hitsThroughDefenses = configuration.armor ? 0 : max(hits - configuration.hitsRemovedByDefenses, 0)
+    let hitsThroughCoverAndDodges = max(hits - configuration.hitsRemovedByDefenses, 0)
+    let hitsThroughDefenses = configuration.armor ? min(hitsThroughCoverAndDodges, configuration.impact) : hitsThroughCoverAndDodges
     if let save = configuration.save {
       let defenseDiceCount = crits + hitsThroughDefenses + (configuration.impervious ? configuration.pierce : 0) + configuration.dangerSense
       defenseDice = Array(repeating: save, count: defenseDiceCount).roll()

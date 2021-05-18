@@ -10,6 +10,7 @@ class Configuration: ObservableObject {
   @Published var critical: Int
   @Published var pierce: Int
   @Published var precise: Int
+  @Published var impact: Int
   @Published var aims: Int
   
   @Published var cover: Cover
@@ -21,9 +22,9 @@ class Configuration: ObservableObject {
   @Published var impervious: Bool
   @Published var dangerSense: Int
   
-  // TODO: impact, ram
+  // TODO: impact X, ram X
   // TODO: armor X, uncanny luck X
-  // TODO: (Low priority) Lethal, marksman, observation tokens, poison X, Full of Surprises
+  // TODO: (Low priority) Lethal, outmaneuver, marksman, observation tokens, poison X, Full of Surprises
   
   var rerollCount: Int {
     return 2 + precise
@@ -37,6 +38,7 @@ class Configuration: ObservableObject {
        critical: Int = 0,
        pierce: Int = 0,
        precise: Int = 0,
+       impact: Int = 0,
        aims: Int = 0,
        cover: Cover = .heavy,
        dodges: Int = 0,
@@ -54,6 +56,7 @@ class Configuration: ObservableObject {
     self.critical = critical
     self.pierce = pierce
     self.precise = precise
+    self.impact = impact
     self.aims = aims
     self.cover = cover
     self.dodges = dodges
@@ -148,6 +151,15 @@ class Configuration: ObservableObject {
     }
     set {
       precise = newValue.interaction.count
+    }
+  }
+  
+  var impactOption: Option {
+    get {
+      Option(name: "Impact", interaction: .counter(impact))
+    }
+    set {
+      impact = newValue.interaction.count
     }
   }
   

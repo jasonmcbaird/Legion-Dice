@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A71FDD9264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
 		3A71FDDA264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
-		3AAEF337260CD0D000ECB825 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */; };
+		3AAEF337260CD0D000ECB825 /* AimStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF336260CD0D000ECB825 /* AimStrategyTests.swift */; };
 		3AAEF342260CD0D000ECB825 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */; };
 		3AAEF344260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */; };
 		3AAEF345260CD0D000ECB825 /* Legion_DiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31B260CD0CD00ECB825 /* Legion_DiceApp.swift */; };
@@ -67,7 +67,7 @@
 		3AAEF32C260CD0D000ECB825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AAEF32D260CD0D000ECB825 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		3AAEF332260CD0D000ECB825 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		3AAEF336260CD0D000ECB825 /* AimStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimStrategyTests.swift; sourceTree = "<group>"; };
 		3AAEF338260CD0D000ECB825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AAEF33D260CD0D000ECB825 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		3AAEF335260CD0D000ECB825 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3AAEF336260CD0D000ECB825 /* Tests_iOS.swift */,
+				3AAEF336260CD0D000ECB825 /* AimStrategyTests.swift */,
 				3AAEF338260CD0D000ECB825 /* Info.plist */,
 			);
 			path = "Tests iOS";
@@ -392,7 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AAEF337260CD0D000ECB825 /* Tests_iOS.swift in Sources */,
+				3AAEF337260CD0D000ECB825 /* AimStrategyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

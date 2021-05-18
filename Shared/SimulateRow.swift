@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SimulateRow: View {
   private let expectedSimulationCount = 10000 // TODO: Make this configurable
+  // TODO: If applicable, display average surges spent on offense and defense
+  // TODO: Show % of simulations that achieved each number of wounds
   
   @EnvironmentObject var configuration: Configuration
   @State var simulations: [Simulation] = []

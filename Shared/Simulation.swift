@@ -9,8 +9,6 @@ struct Simulation {
   let blocks: Int
   let wounds: Int
   
-  // TODO: Unit test the crap out of this
-  
   init(configuration: Configuration) {
     attackDice = configuration.attackDice
     

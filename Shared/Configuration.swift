@@ -21,8 +21,9 @@ class Configuration: ObservableObject {
   @Published var impervious: Bool
   @Published var dangerSense: Int
   
-  // TODO: impact, lethal, marksman, ram
+  // TODO: impact, ram
   // TODO: armor X, uncanny luck X
+  // TODO: (Low priority) Lethal, marksman, observation tokens, poison X, Full of Surprises
   
   var rerollCount: Int {
     return 2 + precise

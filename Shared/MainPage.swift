@@ -21,6 +21,7 @@ struct MainPage: View {
           OptionRow(option: $configuration.pierceOption)
           OptionRow(option: $configuration.preciseOption)
           OptionRow(option: $configuration.impactOption)
+          OptionRow(option: $configuration.ramOption)
           OptionRow(option: $configuration.aimsOption)
         }
       }.padding()
@@ -36,7 +37,8 @@ struct MainPage: View {
         OptionRow(option: $configuration.saveOption)
         OptionRow(option: $configuration.defensiveSurgeOption)
         OptionRow(option: $configuration.defensiveSurgeTokensOption)
-        OptionRow(option: $configuration.armorOption)
+        OptionRow(option: $configuration.fullArmorOption)
+        OptionRow(option: $configuration.armorXOption)
         OptionRow(option: $configuration.imperviousOption)
         OptionRow(option: $configuration.dangerSenseOption)
       }.padding()

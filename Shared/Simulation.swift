@@ -16,14 +16,16 @@ struct Simulation {
     
     AimStrategy().spendAims(configuration: configuration, attackDice: attackDice)
     
-    let surgeCrits = configuration.offensiveSurge == .crit ? attackDice.rawSurges : 0
-    let criticalX = attackDice.getCriticalX(configuration: configuration)
-    crits = attackDice.rawCrits + surgeCrits + criticalX
+    crits = attackDice.getConvertedCrits(configuration: configuration)
     
     hits = attackDice.getHits(configuration: configuration)
     
-    let hitsThroughCoverAndDodges = max(hits - configuration.hitsRemovedByDefenses, 0)
-    let hitsThroughDefenses = configuration.armor ? min(hitsThroughCoverAndDodges, configuration.impact) : hitsThroughCoverAndDodges
+    let hitsThroughBasicDefenses = max(hits - configuration.hitsRemovedByDefenses, 0)
+    let hitsThroughArmorX = configuration.hitsThroughArmorX(hitsThroughBasicDefenses: hitsThroughBasicDefenses)
+    let hitsThroughFullArmor = configuration.fullArmor ?
+      min(hitsThroughBasicDefenses, configuration.impact) :
+      hitsThroughBasicDefenses
+    let hitsThroughDefenses = min(hitsThroughArmorX, hitsThroughFullArmor)
     if let save = configuration.save {
       let defenseDiceCount = crits + hitsThroughDefenses + (configuration.impervious ? configuration.pierce : 0) + configuration.dangerSense
       defenseDice = Array(repeating: save, count: defenseDiceCount).roll()

@@ -22,7 +22,7 @@ struct AimStrategy {
     let currentHits = attackDice.getHits(configuration: configuration)
     let hitsNeededToBreakDefenses = hitsRemovedByDefenses - currentHits
     let potentialHits = min(bestBlankDice.count, aimsRemaining * configuration.rerollCount)
-    let canBreakDefenses = !configuration.armor && potentialHits > hitsNeededToBreakDefenses
+    let canBreakDefenses = !configuration.fullArmor && potentialHits > hitsNeededToBreakDefenses
     guard !canBreakDefenses else { return Array(bestBlankDice) }
     let hits = Array(attackDice.filter { $0.face == .hit } + attackDice.getSurgesConvertedToHits(configuration: configuration))
     let bestNonCrits = (hits + bestBlankDice).sortedByQuality()

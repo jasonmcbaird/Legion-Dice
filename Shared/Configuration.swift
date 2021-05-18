@@ -11,6 +11,7 @@ class Configuration: ObservableObject {
   @Published var pierce: Int
   @Published var precise: Int
   @Published var impact: Int
+  @Published var ram: Int
   @Published var aims: Int
   
   @Published var cover: Cover
@@ -18,12 +19,13 @@ class Configuration: ObservableObject {
   @Published var save: DefenseDie?
   @Published var defensiveSurge: DefenseDie.Face
   @Published var defensiveSurgeTokens: Int
-  @Published var armor: Bool
+  @Published var fullArmor: Bool
+  @Published var armorX: Int
   @Published var impervious: Bool
   @Published var dangerSense: Int
   
-  // TODO: impact X, ram X
-  // TODO: armor X, uncanny luck X
+  // TODO: impact X aim strategy, ram X
+  // TODO: armor X aim strategy, uncanny luck X
   // TODO: (Low priority) Lethal, outmaneuver, marksman, observation tokens, poison X, Full of Surprises
   
   var rerollCount: Int {
@@ -39,13 +41,15 @@ class Configuration: ObservableObject {
        pierce: Int = 0,
        precise: Int = 0,
        impact: Int = 0,
+       ram: Int = 0,
        aims: Int = 0,
        cover: Cover = .heavy,
        dodges: Int = 0,
        save: DefenseDie? = .init(color: .red),
        defensiveSurge: DefenseDie.Face = .blank,
        defensiveSurgeTokens: Int = 0,
-       armor: Bool = false,
+       fullArmor: Bool = false,
+       armorX: Int = 0,
        impervious: Bool = false,
        dangerSense: Int = 0) {
     self.redOffense = redOffense
@@ -57,13 +61,15 @@ class Configuration: ObservableObject {
     self.pierce = pierce
     self.precise = precise
     self.impact = impact
+    self.ram = ram
     self.aims = aims
     self.cover = cover
     self.dodges = dodges
     self.save = save
     self.defensiveSurge = defensiveSurge
     self.defensiveSurgeTokens = defensiveSurgeTokens
-    self.armor = armor
+    self.fullArmor = fullArmor
+    self.armorX = armorX
     self.impervious = impervious
     self.dangerSense = dangerSense
   }
@@ -77,6 +83,14 @@ class Configuration: ObservableObject {
   var hitsRemovedByDefenses: Int {
     return cover.removedHits + dodges
   }
+  
+  func hitsThroughArmorX(hitsThroughBasicDefenses: Int) -> Int {
+    let impactCrits = max(hitsThroughBasicDefenses, impact)
+    let armorableHits = hitsThroughBasicDefenses - impactCrits
+    return impactCrits + max(armorableHits - armorX, 0)
+  }
+  
+  // TODO: Reduce duplication on these vars
   
   var redOffenseOption: Option {
     get {
@@ -163,6 +177,15 @@ class Configuration: ObservableObject {
     }
   }
   
+  var ramOption: Option {
+    get {
+      Option(name: "Ram", interaction: .counter(ram))
+    }
+    set {
+      ram = newValue.interaction.count
+    }
+  }
+  
   var aimsOption: Option {
     get {
       Option(name: "Aims", interaction: .counter(aims))
@@ -229,14 +252,23 @@ class Configuration: ObservableObject {
     }
   }
   
-  var armorOption: Option {
+  var fullArmorOption: Option {
     get {
       let noneButton = Option.Interaction.RadioButton(name: "None")
       let fullButton = Option.Interaction.RadioButton(name: "Full")
-      return Option(name: "Armor", interaction: .radio(buttons: [noneButton, fullButton], selected: armor ? fullButton : noneButton))
+      return Option(name: "Armor", interaction: .radio(buttons: [noneButton, fullButton], selected: fullArmor ? fullButton : noneButton))
     }
     set {
-      armor = newValue.interaction.count == 1 ? true : false
+      fullArmor = newValue.interaction.count == 1 ? true : false
+    }
+  }
+  
+  var armorXOption: Option {
+    get {
+      Option(name: "Armor X", interaction: .counter(armorX))
+    }
+    set {
+      armorX = newValue.interaction.count
     }
   }
   

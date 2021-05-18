@@ -28,7 +28,9 @@ struct Simulation {
     let hitsThroughDefenses = min(hitsThroughArmorX, hitsThroughFullArmor)
     if let save = configuration.save {
       let defenseDiceCount = crits + hitsThroughDefenses + (configuration.impervious ? configuration.pierce : 0) + configuration.dangerSense
-      defenseDice = Array(repeating: save, count: defenseDiceCount).roll()
+      defenseDice = Array(repeating: save, count: defenseDiceCount).map { DefenseDie(color: $0.color) }
+      defenseDice.roll()
+      defenseDice.spendUncannyLuckDice(configuration: configuration)
     } else {
       defenseDice = []
     }

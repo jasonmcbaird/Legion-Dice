@@ -37,10 +37,13 @@ struct MainPage: View {
         OptionRow(option: $configuration.saveOption)
         OptionRow(option: $configuration.defensiveSurgeOption)
         OptionRow(option: $configuration.defensiveSurgeTokensOption)
-        OptionRow(option: $configuration.fullArmorOption)
-        OptionRow(option: $configuration.armorXOption)
-        OptionRow(option: $configuration.imperviousOption)
-        OptionRow(option: $configuration.dangerSenseOption)
+        VStack {
+          OptionRow(option: $configuration.fullArmorOption)
+          OptionRow(option: $configuration.armorXOption)
+          OptionRow(option: $configuration.imperviousOption)
+          OptionRow(option: $configuration.dangerSenseOption)
+          OptionRow(option: $configuration.uncannyLuckOption)
+        }
       }.padding()
       .overlay(
         RoundedRectangle(cornerRadius: 16)

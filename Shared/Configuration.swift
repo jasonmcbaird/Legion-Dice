@@ -23,9 +23,10 @@ class Configuration: ObservableObject {
   @Published var armorX: Int
   @Published var impervious: Bool
   @Published var dangerSense: Int
+  @Published var uncannyLuck: Int
   
-  // TODO: impact X aim strategy, ram X
-  // TODO: armor X aim strategy, uncanny luck X
+  // TODO: impact X aim strategy
+  // TODO: armor X aim strategy
   // TODO: (Low priority) Lethal, outmaneuver, marksman, observation tokens, poison X, Full of Surprises
   
   var rerollCount: Int {
@@ -51,7 +52,8 @@ class Configuration: ObservableObject {
        fullArmor: Bool = false,
        armorX: Int = 0,
        impervious: Bool = false,
-       dangerSense: Int = 0) {
+       dangerSense: Int = 0,
+       uncannyLuck: Int = 0) {
     self.redOffense = redOffense
     self.blackOffense = blackOffense
     self.whiteOffense = whiteOffense
@@ -72,6 +74,7 @@ class Configuration: ObservableObject {
     self.armorX = armorX
     self.impervious = impervious
     self.dangerSense = dangerSense
+    self.uncannyLuck = uncannyLuck
   }
   
   var attackDice: [AttackDie] {
@@ -293,6 +296,15 @@ class Configuration: ObservableObject {
     }
     set {
       dangerSense = newValue.interaction.count
+    }
+  }
+  
+  var uncannyLuckOption: Option {
+    get {
+      Option(name: "Uncanny Luck", interaction: .counter(uncannyLuck))
+    }
+    set {
+      uncannyLuck = newValue.interaction.count
     }
   }
   

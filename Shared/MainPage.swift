@@ -8,53 +8,55 @@ struct MainPage: View {
   let averageDamage: Float = 0
   
   var body: some View {
-    VStack { // TODO: Nicer UI
-      VStack { // TODO: Better deliniation of offense vs defense
-        Text("Offense").bold() // TODO: Tighter use of space. Collapsible sections?
-        OptionRow(option: $configuration.redOffenseOption)
-        OptionRow(option: $configuration.blackOffenseOption)
-        OptionRow(option: $configuration.whiteOffenseOption)
-        OptionRow(option: $configuration.offensiveSurgeOption)
-        OptionRow(option: $configuration.offensiveSurgeTokensOption)
+    ScrollView {
+      VStack { // TODO: Nicer UI
+        VStack { // TODO: Better deliniation of offense vs defense
+          Text("Offense").bold() // TODO: Tighter use of space. Collapsible sections?
+          OptionRow(option: $configuration.redOffenseOption)
+          OptionRow(option: $configuration.blackOffenseOption)
+          OptionRow(option: $configuration.whiteOffenseOption)
+          OptionRow(option: $configuration.offensiveSurgeOption)
+          OptionRow(option: $configuration.offensiveSurgeTokensOption)
+          VStack {
+            OptionRow(option: $configuration.criticalOption)
+            OptionRow(option: $configuration.pierceOption)
+            OptionRow(option: $configuration.preciseOption)
+            OptionRow(option: $configuration.impactOption)
+            OptionRow(option: $configuration.ramOption)
+            OptionRow(option: $configuration.aimsOption)
+          }
+        }.padding()
+        .overlay(
+          RoundedRectangle(cornerRadius: 16)
+            .stroke(Color.red, lineWidth: 3)
+        )
+        .padding(.horizontal)
         VStack {
-          OptionRow(option: $configuration.criticalOption)
-          OptionRow(option: $configuration.pierceOption)
-          OptionRow(option: $configuration.preciseOption)
-          OptionRow(option: $configuration.impactOption)
-          OptionRow(option: $configuration.ramOption)
-          OptionRow(option: $configuration.aimsOption)
-        }
-      }.padding()
-      .overlay(
-        RoundedRectangle(cornerRadius: 16)
-          .stroke(Color.red, lineWidth: 3)
-      )
-      .padding(.horizontal)
-      VStack {
-        Text("Defense").bold()
-        OptionRow(option: $configuration.coverOption)
-        OptionRow(option: $configuration.dodgesOption)
-        OptionRow(option: $configuration.saveOption)
-        OptionRow(option: $configuration.defensiveSurgeOption)
-        OptionRow(option: $configuration.defensiveSurgeTokensOption)
-        VStack {
-          OptionRow(option: $configuration.fullArmorOption)
-          OptionRow(option: $configuration.armorXOption)
-          OptionRow(option: $configuration.imperviousOption)
-          OptionRow(option: $configuration.dangerSenseOption)
-          OptionRow(option: $configuration.uncannyLuckOption)
-        }
-      }.padding()
-      .overlay(
-        RoundedRectangle(cornerRadius: 16)
-          .stroke(Color.blue, lineWidth: 3)
-      )
-      .padding(.horizontal)
-      Spacer()
-      SimulateRow()
-        .environmentObject(configuration)
-    } // TODO: Frequently used offensive kits (clone Z6 w/surges, rebel DLT, shore T-21, etc.)
-    // TODO: Frequently used defensive kits (B1, B2, rebel, imp, clone)
+          Text("Defense").bold()
+          OptionRow(option: $configuration.coverOption)
+          OptionRow(option: $configuration.dodgesOption)
+          OptionRow(option: $configuration.saveOption)
+          OptionRow(option: $configuration.defensiveSurgeOption)
+          OptionRow(option: $configuration.defensiveSurgeTokensOption)
+          VStack {
+            OptionRow(option: $configuration.fullArmorOption)
+            OptionRow(option: $configuration.armorXOption)
+            OptionRow(option: $configuration.imperviousOption)
+            OptionRow(option: $configuration.dangerSenseOption)
+            OptionRow(option: $configuration.uncannyLuckOption)
+          }
+        }.padding()
+        .overlay(
+          RoundedRectangle(cornerRadius: 16)
+            .stroke(Color.blue, lineWidth: 3)
+        )
+        .padding(.horizontal)
+        Spacer()
+        SimulateRow()
+          .environmentObject(configuration)
+      } // TODO: Frequently used offensive kits (clone Z6 w/surges, rebel DLT, shore T-21, etc.)
+      // TODO: Frequently used defensive kits (B1, B2, rebel, imp, clone)
+    }
   }
 }
 

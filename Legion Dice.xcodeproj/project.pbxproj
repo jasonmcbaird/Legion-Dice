@@ -545,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Legion-Dice";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasonisconfused.legiondice;
 				PRODUCT_NAME = "Legion Dice";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -567,7 +567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonisconfused.Legion-Dice";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasonisconfused.legiondice;
 				PRODUCT_NAME = "Legion Dice";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;

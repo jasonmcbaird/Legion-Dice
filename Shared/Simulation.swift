@@ -20,7 +20,7 @@ struct Simulation {
     
     hits = attackDice.getHits(configuration: configuration)
     
-    let hitsThroughBasicDefenses = max(hits - configuration.hitsRemovedByDefenses, 0)
+    let hitsThroughBasicDefenses = max(hits - configuration.hitsRemovedByBasicDefenses, 0)
     let hitsThroughArmorX = configuration.hitsThroughArmorX(hitsThroughBasicDefenses: hitsThroughBasicDefenses)
     let hitsThroughFullArmor = configuration.fullArmor ?
       min(hitsThroughBasicDefenses, configuration.impact) :

@@ -82,7 +82,7 @@ class Configuration: ObservableObject {
       Array(repeating: (), count: whiteOffense).map { AttackDie(color: .white) }
   }
   
-  var hitsRemovedByDefenses: Int {
+  var hitsRemovedByBasicDefenses: Int {
     return cover.removedHits + dodges
   }
   

@@ -19,9 +19,9 @@ struct AimStrategy {
     guard configuration.rerollCount > bestBlankDice.count else {
       return Array(bestBlankDice)
     }
-    let hitsRemovedByDefenses = configuration.hitsRemovedByDefenses
+    let hitsRemovedByBasicDefenses = configuration.hitsRemovedByBasicDefenses
     let currentHits = attackDice.getHits(configuration: configuration)
-    let hitsNeededToBreakDefenses = hitsRemovedByDefenses - currentHits
+    let hitsNeededToBreakDefenses = hitsRemovedByBasicDefenses - currentHits
     let potentialNewHits = min(bestBlankDice.count, aimsRemaining * configuration.rerollCount)
     let shouldCritFish: Bool
     if configuration.fullArmor {

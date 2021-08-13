@@ -1,14 +1,8 @@
-//
-//  RadioRow.swift
-//  Legion Dice
-//
-//  Created by Jason Baird on 8/13/21.
-//
-
 import SwiftUI
 
 struct RadioRow: View {
   
+  @Environment(\.colorScheme) var colorScheme
   @Binding var option: Option
   let emphasized: Bool
   
@@ -17,11 +11,11 @@ struct RadioRow: View {
       if emphasized {
         Text("\(option.name):")
           .font(.system(.footnote).bold())
-          .foregroundColor(Color(white: 0.2))
+          .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
       } else {
         Text("\(option.name):")
           .font(.system(.caption))
-          .foregroundColor(Color(white: 0.2))
+          .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
       }
       Spacer()
       Radio(buttons: option.interaction.buttons, selected: $option.interaction.count)

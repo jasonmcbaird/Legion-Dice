@@ -4,6 +4,7 @@ struct MainPage: View {
   
   @StateObject var configuration = Configuration()
   
+  @Environment(\.colorScheme) var colorScheme
   let simulations = [Simulation]()
   let averageDamage: Float = 0
   
@@ -12,7 +13,8 @@ struct MainPage: View {
       VStack {
         VStack {
           Text("Offense")
-            .bold().foregroundColor(Color(white: 0.2))
+            .bold()
+            .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
           HStack {
             VStack {
               OptionRow(option: $configuration.redOffenseOption, emphasized: true)
@@ -39,7 +41,7 @@ struct MainPage: View {
         VStack {
           Text("Defense")
             .bold()
-            .foregroundColor(Color(white: 0.2))
+            .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
           HStack {
             VStack {
               OptionRow(option: $configuration.coverOption, emphasized: true)

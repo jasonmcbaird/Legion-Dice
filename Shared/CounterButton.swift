@@ -1,10 +1,3 @@
-//
-//  CounterButton.swift
-//  Legion Dice
-//
-//  Created by Jason Baird on 8/13/21.
-//
-
 import SwiftUI
 
 struct CounterButton: View {

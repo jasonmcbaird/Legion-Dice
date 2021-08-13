@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct Counter: View {
+  @Environment(\.colorScheme) var colorScheme
   @Binding var count: Int
   let name: String
   let emphasized: Bool
@@ -16,11 +17,11 @@ struct Counter: View {
       if emphasized {
         Text("\(name): \($count.wrappedValue)")
           .font(.system(.footnote).bold())
-          .foregroundColor(Color(white: 0.2))
+          .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
       } else {
         Text("\(name): \($count.wrappedValue)")
           .font(.system(.caption))
-          .foregroundColor(Color(white: 0.2))
+          .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
       }
       Spacer()
       CounterButton(text: "+") {

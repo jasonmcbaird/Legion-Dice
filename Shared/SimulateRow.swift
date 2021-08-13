@@ -5,6 +5,7 @@ struct SimulateRow: View {
   // TODO: If applicable, display average surges spent on offense and defense
   // TODO: Show % of simulations that achieved each number of wounds
   
+  @Environment(\.colorScheme) var colorScheme
   @EnvironmentObject var configuration: Configuration
   @State var simulations: [Simulation] = []
   var completedSimulations: Float {
@@ -41,7 +42,7 @@ struct SimulateRow: View {
       }
       Spacer()
       Text("Average Wounds: \(averageDamage, specifier: "%.3f")")
-        .foregroundColor(Color(white: 0.2))
+        .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
     }.padding()
   }
 }

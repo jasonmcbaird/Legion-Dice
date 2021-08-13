@@ -11,6 +11,8 @@
 		3A221B5526C723E00077F9F3 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5326C723E00077F9F3 /* CounterButton.swift */; };
 		3A221B5726C72DD30077F9F3 /* RadioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5626C72DD30077F9F3 /* RadioRow.swift */; };
 		3A221B5826C72DD30077F9F3 /* RadioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5626C72DD30077F9F3 /* RadioRow.swift */; };
+		3A221B5A26C735E20077F9F3 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5926C735E20077F9F3 /* Color+Custom.swift */; };
+		3A221B5B26C735E20077F9F3 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5926C735E20077F9F3 /* Color+Custom.swift */; };
 		3A71FDD9264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
 		3A71FDDA264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
 		3AAEF337260CD0D000ECB825 /* AimStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF336260CD0D000ECB825 /* AimStrategyTests.swift */; };
@@ -63,6 +65,7 @@
 /* Begin PBXFileReference section */
 		3A221B5326C723E00077F9F3 /* CounterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
 		3A221B5626C72DD30077F9F3 /* RadioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioRow.swift; sourceTree = "<group>"; };
+		3A221B5926C735E20077F9F3 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		3A71FDD8264B56C40096EDEE /* AimStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimStrategy.swift; sourceTree = "<group>"; };
 		3AAEF31B260CD0CD00ECB825 /* LegionDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegionDiceApp.swift; sourceTree = "<group>"; };
 		3AAEF31C260CD0CD00ECB825 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 				3AAEF371260CDD6700ECB825 /* DefenseDie.swift */,
 				3AAEF36A260CDD1200ECB825 /* AttackDie.swift */,
 				3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */,
+				3A221B5926C735E20077F9F3 /* Color+Custom.swift */,
 				3AAEF31D260CD0D000ECB825 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -369,6 +373,7 @@
 				3AAEF3CD260D017600ECB825 /* Array+ElementAt.swift in Sources */,
 				3AAEF3C6260D00D600ECB825 /* Radio.swift in Sources */,
 				3AAEF397260CEAD700ECB825 /* OptionRow.swift in Sources */,
+				3A221B5A26C735E20077F9F3 /* Color+Custom.swift in Sources */,
 				3AAEF36B260CDD1200ECB825 /* AttackDie.swift in Sources */,
 				3A221B5726C72DD30077F9F3 /* RadioRow.swift in Sources */,
 				3AAEF35D260CD12700ECB825 /* Configuration.swift in Sources */,
@@ -391,6 +396,7 @@
 				3AAEF3CE260D017600ECB825 /* Array+ElementAt.swift in Sources */,
 				3AAEF3C7260D00D600ECB825 /* Radio.swift in Sources */,
 				3AAEF398260CEAD700ECB825 /* OptionRow.swift in Sources */,
+				3A221B5B26C735E20077F9F3 /* Color+Custom.swift in Sources */,
 				3AAEF36C260CDD1200ECB825 /* AttackDie.swift in Sources */,
 				3A221B5826C72DD30077F9F3 /* RadioRow.swift in Sources */,
 				3AAEF35E260CD12700ECB825 /* Configuration.swift in Sources */,
@@ -549,7 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = SAQ6ER5HN2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -572,7 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = SAQ6ER5HN2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;

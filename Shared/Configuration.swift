@@ -25,7 +25,6 @@ class Configuration: ObservableObject {
   @Published var dangerSense: Int
   @Published var uncannyLuck: Int
   
-  // TODO: impact X aim strategy
   // TODO: armor X aim strategy
   // TODO: (Low priority) Lethal, outmaneuver, marksman, observation tokens, poison X, Full of Surprises
   

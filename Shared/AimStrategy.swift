@@ -15,18 +15,42 @@ struct AimStrategy {
     let rawBlankDice = attackDice.filter { $0.face == .blank }
     let blankAfterSurgeDice = nonSurgingDice + rawBlankDice
     let bestBlankDice = blankAfterSurgeDice.prefix(configuration.rerollCount)
+    // If you have enough blank dice for a full aim, reroll those
     guard configuration.rerollCount > bestBlankDice.count else {
       return Array(bestBlankDice)
     }
     let hitsRemovedByDefenses = configuration.hitsRemovedByDefenses
     let currentHits = attackDice.getHits(configuration: configuration)
     let hitsNeededToBreakDefenses = hitsRemovedByDefenses - currentHits
-    let potentialHits = min(bestBlankDice.count, aimsRemaining * configuration.rerollCount)
-    let canBreakDefenses = !configuration.fullArmor && potentialHits > hitsNeededToBreakDefenses
-    guard !canBreakDefenses else { return Array(bestBlankDice) }
+    let potentialNewHits = min(bestBlankDice.count, aimsRemaining * configuration.rerollCount)
+    let shouldCritFish: Bool
+    if configuration.fullArmor {
+      // If you have:
+      // 1. Impact against full armor
+      // 2. Don't have enough blanks to fill your aims
+      // 3. Already maxed out your impact
+      // Then crit-fish with extra hits beyond impact
+      shouldCritFish = currentHits >= configuration.impact
+    } else {
+      // If you can't break the target's cover and dodges through rerolling blanks,
+      // then crit-fish.
+      shouldCritFish = hitsNeededToBreakDefenses >= potentialNewHits
+    }
+    guard shouldCritFish else { return Array(bestBlankDice) }
+    // Crit-fish because either:
+    // 1. You can't break their cover and dodges, or
+    // 2. You've already used all your impact against full armor
     let hits = Array(attackDice.filter { $0.face == .hit } + attackDice.getSurgesConvertedToHits(configuration: configuration))
-    let bestNonCrits = (hits + bestBlankDice).sortedByQuality()
-    return Array(bestNonCrits.prefix(configuration.rerollCount - bestBlankDice.count))
+    let bestNonCrits = bestBlankDice + hits
+    let numberOfHitsThatCouldBeRerolled = configuration.rerollCount - bestBlankDice.count
+    let numberOfHitsToReroll: Int
+    if configuration.fullArmor {
+      let extraHitsBeyondImpact = max(0, currentHits - configuration.impact)
+      numberOfHitsToReroll = min(numberOfHitsThatCouldBeRerolled, extraHitsBeyondImpact)
+    } else {
+      numberOfHitsToReroll = numberOfHitsThatCouldBeRerolled
+    }
+    return Array(bestNonCrits.prefix(numberOfHitsToReroll))
   }
 }
 

@@ -41,6 +41,7 @@ struct SimulateRow: View {
       }
       Spacer()
       Text("Average Wounds: \(averageDamage, specifier: "%.3f")")
+        .foregroundColor(Color(white: 0.2))
     }.padding()
   }
 }

@@ -5,13 +5,14 @@ struct Radio: View {
   @Binding var selected: Int
   
   var body: some View {
-    HStack {
+    HStack(spacing: 3) {
       ForEach(0..<buttons.count) { index in
         Button(buttons[index].name) {
           selected = index
-        }.foregroundColor(.white)
-        .padding(1)
-        .background(index == selected ? Color.accentColor : Color.secondary)
+        }.font(.system(.caption2))
+        .foregroundColor(index == selected ? .white : Color(white: 0.3))
+        .padding(2)
+        .background(index == selected ? Color.accentColor : Color(white: 0.9))
         .cornerRadius(5)
       }
     }

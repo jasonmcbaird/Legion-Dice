@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct Legion_DiceApp: App {
+struct LegionDiceApp: App {
     var body: some Scene {
         WindowGroup {
             MainPage()

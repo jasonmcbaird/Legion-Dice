@@ -33,8 +33,8 @@ class Configuration: ObservableObject {
   }
   
   init(redOffense: Int = 0,
-       blackOffense: Int = 4,
-       whiteOffense: Int = 6,
+       blackOffense: Int = 0,
+       whiteOffense: Int = 0,
        offensiveSurge: AttackDie.Face = .blank,
        offensiveSurgeTokens: Int = 0,
        critical: Int = 0,
@@ -43,9 +43,9 @@ class Configuration: ObservableObject {
        impact: Int = 0,
        ram: Int = 0,
        aims: Int = 0,
-       cover: Cover = .heavy,
+       cover: Cover = .none,
        dodges: Int = 0,
-       save: DefenseDie? = .init(color: .red),
+       save: DefenseDie? = nil,
        defensiveSurge: DefenseDie.Face = .blank,
        defensiveSurgeTokens: Int = 0,
        fullArmor: Bool = false,
@@ -136,7 +136,7 @@ class Configuration: ObservableObject {
   
   var offensiveSurgeTokensOption: Option {
     get {
-      Option(name: "Surge Tokens", interaction: .counter(offensiveSurgeTokens))
+      Option(name: "Surges", interaction: .counter(offensiveSurgeTokens))
     }
     set {
       offensiveSurgeTokens = newValue.interaction.count
@@ -247,7 +247,7 @@ class Configuration: ObservableObject {
   
   var defensiveSurgeTokensOption: Option {
     get {
-      Option(name: "Surge Tokens", interaction: .counter(defensiveSurgeTokens))
+      Option(name: "Surges", interaction: .counter(defensiveSurgeTokens))
     }
     set {
       defensiveSurgeTokens = newValue.interaction.count

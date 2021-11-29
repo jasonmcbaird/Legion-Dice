@@ -1,6 +1,6 @@
 
 Critical Bugfixes:
-...
+- None known!
 
 Requested Features:
 - Common loadouts
@@ -13,14 +13,15 @@ Features I Want:
   - Outmaneuver
   - Marksman
   - Observation Tokens
+  - Low Profile
 - Save loadouts
 
 Minor Bugfixes:
-- Fix rerolling surges
-
+- Fix rerolling surges (see TODO)
 
 
 Done
 - Armor X doesn't work
 - Show distribution of results (and odds of each result)
 - Clear button for offense & defense
+- Fix simulate results bouncing around

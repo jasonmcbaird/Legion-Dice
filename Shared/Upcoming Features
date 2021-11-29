@@ -3,8 +3,6 @@ Critical Bugfixes:
 ...
 
 Requested Features:
-- Clear button for offense & defense
-- Show distribution of results (and odds of each result)
 - Common loadouts
 
 Features I Want:
@@ -24,3 +22,5 @@ Minor Bugfixes:
 
 Done
 - Armor X doesn't work
+- Show distribution of results (and odds of each result)
+- Clear button for offense & defense

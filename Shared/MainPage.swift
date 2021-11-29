@@ -12,9 +12,17 @@ struct MainPage: View {
     ScrollView {
       VStack {
         VStack {
-          Text("Offense") // TODO: Add clear button
-            .bold()
-            .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
+          HStack {
+            Spacer()
+            Spacer()
+            Text("Offense")
+              .bold()
+              .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
+            Spacer()
+            Button("Clear") {
+              configuration.resetOffense()
+            }
+          }
           HStack {
             VStack {
               OptionRow(option: $configuration.redOffenseOption, emphasized: true)
@@ -25,7 +33,7 @@ struct MainPage: View {
               OptionRow(option: $configuration.criticalOption, emphasized: false)
             }
             VStack {
-//              Button("Loadouts") {
+//              Button("Loadouts") { // TODO: Add loadouts
 //
 //              }
               OptionRow(option: $configuration.aimsOption, emphasized: false)
@@ -42,9 +50,17 @@ struct MainPage: View {
         )
         .padding(.horizontal, 8)
         VStack {
-          Text("Defense") // TODO: Add clear button
-            .bold()
-            .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
+          HStack {
+            Spacer()
+            Spacer()
+            Text("Defense")
+              .bold()
+              .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
+            Spacer()
+            Button("Clear") {
+              configuration.resetDefense()
+            }
+          }
           HStack {
             VStack {
               OptionRow(option: $configuration.coverOption, emphasized: true)

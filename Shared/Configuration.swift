@@ -92,6 +92,32 @@ class Configuration: ObservableObject {
     return impactCrits + max(armorableHits - armorX, 0)
   }
   
+  func resetOffense() {
+    redOffense = 0
+    blackOffense = 0
+    whiteOffense = 0
+    offensiveSurge = .blank
+    offensiveSurgeTokens = 0
+    critical = 0
+    aims = 0
+    pierce = 0
+    impact = 0
+    ram = 0
+  }
+  
+  func resetDefense() {
+    cover = .none
+    save = .none
+    defensiveSurge = .blank
+    defensiveSurgeTokens = 0
+    dodges = 0
+    fullArmor = false
+    armorX = 0
+    impervious = false
+    dangerSense = 0
+    uncannyLuck = 0
+  }
+  
   // TODO: Reduce duplication on these vars
   
   var redOffenseOption: Option {

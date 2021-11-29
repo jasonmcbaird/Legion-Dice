@@ -3,7 +3,6 @@ import SwiftUI
 struct SimulateRow: View {
   private let expectedSimulationCount = 10000 // TODO: Make this configurable
   // TODO: If applicable, display average surges spent on offense and defense
-  // TODO: Show % of simulations that achieved each number of wounds
   
   @Environment(\.colorScheme) var colorScheme
   @EnvironmentObject var configuration: Configuration
@@ -19,31 +18,40 @@ struct SimulateRow: View {
   }
   
   var body: some View {
-    HStack {
-      VStack {
-        Button("Simulate") {
-          simulations = []
-          simulationInProgress = true
-          DispatchQueue(label: "Simulate").async {
-            for _ in 0..<expectedSimulationCount {
-              simulations.append(Simulation(configuration: configuration))
+    VStack {
+      HStack {
+        VStack {
+          Button("Simulate") {
+            simulations = []
+            simulationInProgress = true
+            DispatchQueue(label: "Simulate").async {
+              for _ in 0..<expectedSimulationCount {
+                simulations.append(Simulation(configuration: configuration))
+              }
+              simulationInProgress = false
             }
-            simulationInProgress = false
-          }
-        }.disabled(simulationInProgress)
-        .foregroundColor(.white)
-        .padding()
-        .background(simulationInProgress ? Color.blue : Color.red)
-        .cornerRadius(15)
-        ProgressView(value: completedSimulations)
-          .progressViewStyle(LinearProgressViewStyle())
-          .cornerRadius(5)
-          .opacity(simulationInProgress ? 1 : 0)
+          }.disabled(simulationInProgress)
+            .foregroundColor(.white)
+            .padding()
+            .background(simulationInProgress ? Color.blue : Color.red)
+            .cornerRadius(15)
+          ProgressView(value: completedSimulations)
+            .progressViewStyle(LinearProgressViewStyle())
+            .cornerRadius(5)
+            .opacity(simulationInProgress ? 1 : 0)
+        }
+        Spacer()
+        VStack {
+          Text("Average Wounds:")
+            .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
+          Text("\(averageDamage, specifier: "%.3f")")
+            .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
+        }
+      }.padding()
+      if simulations.count == expectedSimulationCount {
+        SimulationOdds(simulations: simulations)
       }
-      Spacer()
-      Text("Average Wounds: \(averageDamage, specifier: "%.3f")")
-        .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
-    }.padding()
+    }
   }
 }
 

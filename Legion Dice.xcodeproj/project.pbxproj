@@ -11,10 +11,16 @@
 		3A221B5526C723E00077F9F3 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5326C723E00077F9F3 /* CounterButton.swift */; };
 		3A221B5726C72DD30077F9F3 /* RadioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5626C72DD30077F9F3 /* RadioRow.swift */; };
 		3A221B5826C72DD30077F9F3 /* RadioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5626C72DD30077F9F3 /* RadioRow.swift */; };
-		3A221B5A26C735E20077F9F3 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5926C735E20077F9F3 /* Color+Custom.swift */; };
-		3A221B5B26C735E20077F9F3 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5926C735E20077F9F3 /* Color+Custom.swift */; };
+		3A221B5A26C735E20077F9F3 /* Color+DarkCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5926C735E20077F9F3 /* Color+DarkCompatible.swift */; };
+		3A221B5B26C735E20077F9F3 /* Color+DarkCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A221B5926C735E20077F9F3 /* Color+DarkCompatible.swift */; };
+		3A5235C92755471F0035FDC6 /* Upcoming Features in Resources */ = {isa = PBXBuildFile; fileRef = 3A5235C82755471F0035FDC6 /* Upcoming Features */; };
+		3A5235CA2755471F0035FDC6 /* Upcoming Features in Resources */ = {isa = PBXBuildFile; fileRef = 3A5235C82755471F0035FDC6 /* Upcoming Features */; };
+		3A5235CC275576610035FDC6 /* SimulationOdds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5235CB275576610035FDC6 /* SimulationOdds.swift */; };
+		3A5235CD275576610035FDC6 /* SimulationOdds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5235CB275576610035FDC6 /* SimulationOdds.swift */; };
 		3A71FDD9264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
 		3A71FDDA264B56C40096EDEE /* AimStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71FDD8264B56C40096EDEE /* AimStrategy.swift */; };
+		3A7273F326CABD9D00B16B43 /* DefenseLoadouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7273F226CABD9D00B16B43 /* DefenseLoadouts.json */; };
+		3A7273F426CABD9D00B16B43 /* DefenseLoadouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7273F226CABD9D00B16B43 /* DefenseLoadouts.json */; };
 		3AAEF337260CD0D000ECB825 /* AimStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF336260CD0D000ECB825 /* AimStrategyTests.swift */; };
 		3AAEF342260CD0D000ECB825 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF341260CD0D000ECB825 /* Tests_macOS.swift */; };
 		3AAEF344260CD0D000ECB825 /* LegionDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF31B260CD0CD00ECB825 /* LegionDiceApp.swift */; };
@@ -43,6 +49,8 @@
 		3AAEF3C7260D00D600ECB825 /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3C5260D00D600ECB825 /* Radio.swift */; };
 		3AAEF3CD260D017600ECB825 /* Array+ElementAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */; };
 		3AAEF3CE260D017600ECB825 /* Array+ElementAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */; };
+		3AF4873026CABCF100F675B1 /* OffenseLoadouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AF4872F26CABCF100F675B1 /* OffenseLoadouts.json */; };
+		3AF4873126CABCF100F675B1 /* OffenseLoadouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AF4872F26CABCF100F675B1 /* OffenseLoadouts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +73,11 @@
 /* Begin PBXFileReference section */
 		3A221B5326C723E00077F9F3 /* CounterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
 		3A221B5626C72DD30077F9F3 /* RadioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioRow.swift; sourceTree = "<group>"; };
-		3A221B5926C735E20077F9F3 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
+		3A221B5926C735E20077F9F3 /* Color+DarkCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+DarkCompatible.swift"; sourceTree = "<group>"; };
+		3A5235C82755471F0035FDC6 /* Upcoming Features */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Upcoming Features"; sourceTree = "<group>"; };
+		3A5235CB275576610035FDC6 /* SimulationOdds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationOdds.swift; sourceTree = "<group>"; };
 		3A71FDD8264B56C40096EDEE /* AimStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimStrategy.swift; sourceTree = "<group>"; };
+		3A7273F226CABD9D00B16B43 /* DefenseLoadouts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefenseLoadouts.json; sourceTree = "<group>"; };
 		3AAEF31B260CD0CD00ECB825 /* LegionDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegionDiceApp.swift; sourceTree = "<group>"; };
 		3AAEF31C260CD0CD00ECB825 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		3AAEF31D260CD0D000ECB825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +102,7 @@
 		3AAEF3BA260CED3100ECB825 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		3AAEF3C5260D00D600ECB825 /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
 		3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ElementAt.swift"; sourceTree = "<group>"; };
+		3AF4872F26CABCF100F675B1 /* OffenseLoadouts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OffenseLoadouts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,14 +161,18 @@
 				3AAEF3C5260D00D600ECB825 /* Radio.swift */,
 				3AAEF3A4260CEB3A00ECB825 /* Option.swift */,
 				3AAEF387260CE11400ECB825 /* SimulateRow.swift */,
+				3A5235CB275576610035FDC6 /* SimulationOdds.swift */,
 				3AAEF35C260CD12700ECB825 /* Configuration.swift */,
 				3AAEF363260CD2FC00ECB825 /* Simulation.swift */,
 				3A71FDD8264B56C40096EDEE /* AimStrategy.swift */,
 				3AAEF371260CDD6700ECB825 /* DefenseDie.swift */,
 				3AAEF36A260CDD1200ECB825 /* AttackDie.swift */,
 				3AAEF3CC260D017600ECB825 /* Array+ElementAt.swift */,
-				3A221B5926C735E20077F9F3 /* Color+Custom.swift */,
+				3A221B5926C735E20077F9F3 /* Color+DarkCompatible.swift */,
+				3AF4872F26CABCF100F675B1 /* OffenseLoadouts.json */,
+				3A7273F226CABD9D00B16B43 /* DefenseLoadouts.json */,
 				3AAEF31D260CD0D000ECB825 /* Assets.xcassets */,
+				3A5235C82755471F0035FDC6 /* Upcoming Features */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -331,7 +347,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF4873026CABCF100F675B1 /* OffenseLoadouts.json in Resources */,
 				3AAEF348260CD0D000ECB825 /* Assets.xcassets in Resources */,
+				3A5235C92755471F0035FDC6 /* Upcoming Features in Resources */,
+				3A7273F326CABD9D00B16B43 /* DefenseLoadouts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +358,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF4873126CABCF100F675B1 /* OffenseLoadouts.json in Resources */,
 				3AAEF349260CD0D000ECB825 /* Assets.xcassets in Resources */,
+				3A5235CA2755471F0035FDC6 /* Upcoming Features in Resources */,
+				3A7273F426CABD9D00B16B43 /* DefenseLoadouts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +391,12 @@
 				3AAEF364260CD2FC00ECB825 /* Simulation.swift in Sources */,
 				3AAEF3A5260CEB3A00ECB825 /* Option.swift in Sources */,
 				3AAEF372260CDD6700ECB825 /* DefenseDie.swift in Sources */,
+				3A5235CC275576610035FDC6 /* SimulationOdds.swift in Sources */,
 				3AAEF346260CD0D000ECB825 /* MainPage.swift in Sources */,
 				3AAEF3CD260D017600ECB825 /* Array+ElementAt.swift in Sources */,
 				3AAEF3C6260D00D600ECB825 /* Radio.swift in Sources */,
 				3AAEF397260CEAD700ECB825 /* OptionRow.swift in Sources */,
-				3A221B5A26C735E20077F9F3 /* Color+Custom.swift in Sources */,
+				3A221B5A26C735E20077F9F3 /* Color+DarkCompatible.swift in Sources */,
 				3AAEF36B260CDD1200ECB825 /* AttackDie.swift in Sources */,
 				3A221B5726C72DD30077F9F3 /* RadioRow.swift in Sources */,
 				3AAEF35D260CD12700ECB825 /* Configuration.swift in Sources */,
@@ -392,11 +415,12 @@
 				3AAEF365260CD2FC00ECB825 /* Simulation.swift in Sources */,
 				3AAEF3A6260CEB3A00ECB825 /* Option.swift in Sources */,
 				3AAEF373260CDD6700ECB825 /* DefenseDie.swift in Sources */,
+				3A5235CD275576610035FDC6 /* SimulationOdds.swift in Sources */,
 				3AAEF347260CD0D000ECB825 /* MainPage.swift in Sources */,
 				3AAEF3CE260D017600ECB825 /* Array+ElementAt.swift in Sources */,
 				3AAEF3C7260D00D600ECB825 /* Radio.swift in Sources */,
 				3AAEF398260CEAD700ECB825 /* OptionRow.swift in Sources */,
-				3A221B5B26C735E20077F9F3 /* Color+Custom.swift in Sources */,
+				3A221B5B26C735E20077F9F3 /* Color+DarkCompatible.swift in Sources */,
 				3AAEF36C260CDD1200ECB825 /* AttackDie.swift in Sources */,
 				3A221B5826C72DD30077F9F3 /* RadioRow.swift in Sources */,
 				3AAEF35E260CD12700ECB825 /* Configuration.swift in Sources */,

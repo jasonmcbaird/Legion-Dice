@@ -12,7 +12,7 @@ struct MainPage: View {
     ScrollView {
       VStack {
         VStack {
-          Text("Offense")
+          Text("Offense") // TODO: Add clear button
             .bold()
             .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
           HStack {
@@ -25,6 +25,9 @@ struct MainPage: View {
               OptionRow(option: $configuration.criticalOption, emphasized: false)
             }
             VStack {
+//              Button("Loadouts") {
+//
+//              }
               OptionRow(option: $configuration.aimsOption, emphasized: false)
               OptionRow(option: $configuration.pierceOption, emphasized: false)
               OptionRow(option: $configuration.preciseOption, emphasized: false)
@@ -39,7 +42,7 @@ struct MainPage: View {
         )
         .padding(.horizontal, 8)
         VStack {
-          Text("Defense")
+          Text("Defense") // TODO: Add clear button
             .bold()
             .foregroundColor(Color.DarkCompatible.offBlack(colorScheme: colorScheme))
           HStack {
@@ -51,6 +54,9 @@ struct MainPage: View {
               OptionRow(option: $configuration.dodgesOption, emphasized: false)
             }
             VStack {
+//              Button("Loadouts") {
+//
+//              }
               OptionRow(option: $configuration.fullArmorOption, emphasized: false)
               OptionRow(option: $configuration.armorXOption, emphasized: false)
               OptionRow(option: $configuration.imperviousOption, emphasized: false)
@@ -69,7 +75,6 @@ struct MainPage: View {
           .environmentObject(configuration)
       } // TODO: Frequently used offensive kits (clone Z6 w/surges, rebel DLT, shore T-21, etc.)
       // TODO: Frequently used defensive kits (B1, B2, rebel, imp, clone)
-      // TODO: Popup to show odds of each wound count
     }
   }
 }

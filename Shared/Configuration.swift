@@ -26,7 +26,7 @@ class Configuration: ObservableObject {
   @Published var uncannyLuck: Int
   
   // TODO: armor X aim strategy
-  // TODO: (Low priority) Lethal, outmaneuver, marksman, observation tokens, poison X, Full of Surprises
+  // TODO: (Low priority) Lethal, outmaneuver, marksman, observation tokens, Full of Surprises
   
   var rerollCount: Int {
     return 2 + precise
@@ -87,7 +87,7 @@ class Configuration: ObservableObject {
   }
   
   func hitsThroughArmorX(hitsThroughBasicDefenses: Int) -> Int {
-    let impactCrits = max(hitsThroughBasicDefenses, impact)
+    let impactCrits = min(hitsThroughBasicDefenses, impact)
     let armorableHits = hitsThroughBasicDefenses - impactCrits
     return impactCrits + max(armorableHits - armorX, 0)
   }

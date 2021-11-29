@@ -22,7 +22,7 @@ struct RadioRow: View {
     }.padding(.leading, 4)
     .overlay(
       RoundedRectangle(cornerRadius: 4)
-        .stroke(Color(white: 0.7), lineWidth: 2))
+        .stroke(Color.DarkCompatible.lightGray(colorScheme: colorScheme), lineWidth: 2))
   }
 }
 

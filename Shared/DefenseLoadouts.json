@@ -1,0 +1,52 @@
+{
+  "Rebels": [
+    "Rebel Troopers": {
+      "Save": "White",
+      "Surge": "Block"
+    },
+    "Wookiees": {
+      "Save": "White"
+    },
+    "Airspeeder": {
+      "Cover": "Light",
+      "Armor": "Full",
+      "Save": "White",
+      "Surge": "Block"
+    }
+  ],
+  "Empire": [
+    "Stormtroopers": {
+      "Save": "Red"
+    },
+    "Scout Troopers": {
+      "Save": "White",
+      "Surge": "Block"
+    }
+  ],
+  "Republic": [
+    "Phase I Clone Troopers": {
+      "Save": "Red"
+    },
+    "Clone Troopers with 1 surge token": {
+      "Save": "Red",
+      "Surges": 1
+    },
+    "Clone Troopers with 2 surge tokens": {
+      "Save": "Red",
+      "Surges": 2
+    },
+    "Wookiees": {
+      "Save": "White"
+    }
+  ],
+  "Separatists": [
+    "B1 Battle Droids": {
+      "Save": "White"
+    },
+    "B2 Super Battle Droids with 1 surge token": {
+      "Save": "White",
+      "Armor X": 1,
+      "Surges": 1
+    }
+  ]
+}

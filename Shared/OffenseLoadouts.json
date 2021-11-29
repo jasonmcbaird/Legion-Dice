@@ -1,0 +1,61 @@
+{
+  "Rebellion": [
+    "DLT-20A Rebel Troopers": {
+      "Black": 6,
+      "White": 1,
+      "Critical": 1
+    },
+    "Bowcaster Wookiees at range 2": {
+      "Red": 1,
+      "Black": 3,
+      "White": 4,
+      "Surge": "Hit",
+      "Pierce": 1
+    }
+  ],
+  "Empire": [
+    "T-21B Shoretroopers": {
+      "Black": 6,
+      "White": 2,
+      "Critical": 1
+    },
+    "T-21 Stormtroopers": {
+      "White": 8,
+      "Critical": 2,
+      "Surge": "Hit"
+    }
+  ],
+  "Republic": [
+    "Z-6 Clone Troopers": {
+      "Black": 4,
+      "White": 6
+    },
+    "Z-6 Clone Troopers with 1 surge token": {
+      "Black": 4,
+      "White": 6,
+      "Surges": 1
+    },
+    "Z-6 Clone Troopers with 2 surge tokens": {
+      "Black": 4,
+      "White": 6,
+      "Surges": 2
+    }
+  ],
+  "CIS": [
+    "E-5C B1 Battle Droids": {
+      "Black": 3,
+      "White": 6
+    },
+    "E-5s B1 Battle Droids": {
+      "Red": 1,
+      "White": 7,
+      "Critical": 1
+    }
+    "B2-HA Super Battle Droids with Tactical Droid at range 2": {
+      "Red": 3,
+      "Black": 3,
+      "White": 4,
+      "Surges": 1
+    }
+  ]
+}

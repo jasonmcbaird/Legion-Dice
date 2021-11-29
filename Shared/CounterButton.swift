@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CounterButton: View {
+  @Environment(\.colorScheme) var colorScheme
   let text: String
   let callback: () -> ()
   
@@ -11,7 +12,7 @@ struct CounterButton: View {
       Text(text)
     }).padding(.horizontal, 8)
     .padding(.vertical, 4)
-    .background(Color(white: 0.9))
+    .background(Color.DarkCompatible.offWhite(colorScheme: colorScheme))
     .cornerRadius(4)
   }
 }

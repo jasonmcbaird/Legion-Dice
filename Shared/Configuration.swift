@@ -99,18 +99,19 @@ class Configuration: ObservableObject {
     offensiveSurge = .blank
     offensiveSurgeTokens = 0
     critical = 0
-    aims = 0
     pierce = 0
+    precise = 0
     impact = 0
     ram = 0
+    aims = 0
   }
   
   func resetDefense() {
     cover = .none
+    dodges = 0
     save = .none
     defensiveSurge = .blank
     defensiveSurgeTokens = 0
-    dodges = 0
     fullArmor = false
     armorX = 0
     impervious = false

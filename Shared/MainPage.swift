@@ -89,6 +89,9 @@ struct MainPage: View {
         Spacer()
         SimulateRow()
           .environmentObject(configuration)
+        Link(destination: URL(string: "https://www.5280legion.com/")!) {
+          Image("5280")
+        }
       } // TODO: Frequently used offensive kits (clone Z6 w/surges, rebel DLT, shore T-21, etc.)
       // TODO: Frequently used defensive kits (B1, B2, rebel, imp, clone)
     }
